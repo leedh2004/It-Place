@@ -115,6 +115,7 @@ git checkout feature/#1
 
 4. 개발 완료시 해당 브런치에 푸쉬
 ```
+git commit -m "... 구현완료 #1"
 git push origin feature/#1
 ```
 
