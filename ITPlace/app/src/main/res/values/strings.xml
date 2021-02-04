@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">잇플</string>
+    <string name="home">홈</string>
+    <string name="friend">친구</string>
+    <string name="create">개설</string>
+    <string name="notification">알림</string>
+    <string name="setting">설정</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
