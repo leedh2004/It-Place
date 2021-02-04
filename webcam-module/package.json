@@ -1,0 +1,23 @@
+{
+  "name": "it_place_camera",
+  "version": "1.0.0",
+  "description": "it place 화상채팅 모듈",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/leedh2004/It-Place"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@remotemonster/sdk": "^2.7.2",
+    "express": "^4.17.1",
+    "http-server": "^0.12.3",
+    "morgan": "^1.10.0",
+    "nunjucks": "^3.2.2"
+  }
+}
