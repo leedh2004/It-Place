@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <script src="node_modules/@remotemonster/sdk/remon.min.js"></script>
+    <script src="/node_modules/@remotemonster/sdk/remon.min.js"></script>
     <script>
         window.onload = async () => {
             const config = {
@@ -25,22 +25,40 @@
                     console.log(myChannelId);
                 },
                 onComplete() {
-                    console.log(`re\n\n\n\n\n\n\n\n\n\n\n\nmon.listener.onComplete: ${caster.getChannelId()} `);
                     remonRoom[caster.getChannelId()] = true;
                 },
+                onRoomEvent(result) {
+                    console.log(result.channel.id);
+                    let id = result.channel.id;
+                    switch (result.event) {
+                        case 'join':
+                            var p = document.createElement("video");
+                            p.id = id.split(':')[1];
+                            p.autoplay = true;
+                            p.muted = true;
+                            config.view.remote = '#' + p.id;
+                            p.remon = new Remon({ config });
+                            document.getElementsByClassName("video-zone")[0].append(p);
+                            p.remon.joinCast(id);
+                            break;
+                        case 'leave':
+                            let video = document.getElementById(id.split(':')[1]);
+                            if (video) document.getElementsByClassName("video-zone")[0].removeChild(video);
+                            break;
+                    }
+                }
             }
             caster = new Remon({ config, listener })
             caster.createCast();
             setTimeout(async () => {
                 var viewers = {};
-                await caster.createRoom("aaaaaa");
-                var searchResult = await caster.fetchRooms("aaaaaa");
+                await caster.createRoom("a{{roomNumber}}");
+                var searchResult = await caster.fetchRooms("a{{roomNumber}}");
 
                 searchResult.forEach(async ({ id }, i) => {
                     console.log(id + ', ' + i);
-                    console.log("in");
                     var p = document.createElement("video");
-                    p.id = id.replace(":", "-");
+                    p.id = id.split(':')[1];
                     p.autoplay = true;
                     p.muted = true;
                     config.view.remote = '#' + p.id;
