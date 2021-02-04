@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <script src="node_modules/@remotemonster/sdk/remon.min.js"></script>
+</head>
+
+<body>
+    <video id="remoteVideo" autoplay></video>
+    <video id="localVideo" autoplay muted></video>
+    <script>
+        const config = {
+            credential: {
+                serviceId: '4892bc68-6ab2-439b-bc94-a9d64cb4db64',
+                key: '734497fae0f60d8909b59556511b7206c241b310cb31daac84007a79d1ab7d7e'
+            },
+            media: {
+                // video: false,
+                audio: false,
+            },
+            view: {
+                local: '#localVideo'
+            }
+        }
+
+        const listener = {
+            onCreate(channelId) {
+                myChannelId = channelId;
+                console.log(myChannelId);
+            }
+        }
+
+        const caster = new Remon({ listener, config })
+        caster.createRoom("aaaaaa");
+        setTimeout(() => {
+        }, 5000);
+    </script>
+</body>
+
+</html>
