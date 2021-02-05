@@ -18,6 +18,8 @@ const upload = multer({
         bucket: "itplace",
         key: function (req, file, cb) {
             let extension = path.extname(file.originalname);
+            console.log('/multer')
+            console.log(req.file)
             cb(null, Date.now().toString() + extension)
             // var filename = req.params.imageName;
             // var ext = file.mimetype.split('/')[1];

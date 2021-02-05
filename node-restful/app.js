@@ -20,14 +20,13 @@ connection.query('SELECT * from user', (error, rows, fields) => {
 })
 
 // DB INSERT TEST 완료
-/*
-connection.query('INSERT INTO `user` VALUES (2, "Soryung") ', (error, rows, fields) => {
+connection.query('INSERT INTO `user` VALUES (2, "도현") ', (error, rows, fields) => {
   if (error){
     console.log("error")
   }
   console.log('INSERT', rows)
 })
-*/
+
 
 // 라우팅 테스트
 // express built in bodyParser

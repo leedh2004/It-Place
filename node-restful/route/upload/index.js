@@ -33,10 +33,11 @@ const path = require('path')
 const upload = require('./../../s3')
 
 router.post('/', upload.single("imgFile"), function(req, res, next){
-    console.log('??')
-    console.log(process.env.AWS_ACCESS_KEY_ID)
-    console.log(req.file)
-    res.send('end')
+    let response = {
+        'image_url':req.file.location
+    }
+    console.log(response)
+    res.send(response)
 })
 
 module.exports = router
