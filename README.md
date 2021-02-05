@@ -26,6 +26,7 @@
 - 플레이스를 만들고 싶을땐 이름, 제한인원수, 태그, 자신의 썸네일 이미지, 플레이스의 커버 이미지를 지정해 개설할 수 있습니다.<br>
  
 <img src="https://user-images.githubusercontent.com/69130921/107083209-a6279000-6838-11eb-9e5c-00c48429b2e3.PNG"><br><br>
+ :warning: 아직 구현되지 않은 기능도 존재합니다.
  
 ## 현재 잇-플이 제공하는 서비스는 :low_brightness:
  ### 종강파티 :tada:
