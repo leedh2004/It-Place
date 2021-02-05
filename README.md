@@ -13,6 +13,7 @@
  </div><br>
 3. 플레이스 안에선 노래, 시청, 주문, 효과, 게임, 촬영과 같은 기능들을 이용할수 있습니다.<br>
 <div>
+ <img src="https://user-images.githubusercontent.com/69130921/107084996-2b13a900-683b-11eb-955f-7de247c3cd89.PNG">
  <img src="https://user-images.githubusercontent.com/69130921/107084130-fce19980-6839-11eb-81d0-eb6533bd01c2.PNG">
  <img src="https://user-images.githubusercontent.com/69130921/107084828-e982fe00-683a-11eb-8f31-2042592f7e9f.PNG">
  <img src="https://user-images.githubusercontent.com/69130921/107084834-eab42b00-683a-11eb-80b3-7eb78b5bfe49.PNG">
