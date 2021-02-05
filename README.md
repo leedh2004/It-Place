@@ -46,10 +46,10 @@
 - 2021 SW중심대학 공동해커톤 산출물
 - 개발기간: \`21.02.04 ~ \`21.02.06
 
-#### 김소령(서울여자대학교, 디자이너, 팀장)<br>
-#### 김동규(숭실대학교, 백엔드)<br>
+#### :snowman:김소령(서울여자대학교, 디자이너, 팀장)<br>
+#### :soccer:김동규(숭실대학교, 백엔드)<br>
 #### :two_hearts:정선아(충북대학교, 백엔드)<br>
-#### 이도현(한양대학교, 프론트)<br>
+#### :earth_americas:이도현(한양대학교, 프론트)<br>
 #### :christmas_tree:이범준(호서대학교, 프론트)<br>
 <br>
 
@@ -88,7 +88,7 @@
 - Provider Design Pattern
 - Android
 
-<br>'
+<br>
 
 ## 참고자료 :scroll:
 - ...
@@ -102,7 +102,7 @@
 ...
 
 ### 2. 서비스 관련
-
+...
 <br>
 
 ## 최종 목표 :triangular_flag_on_post:
@@ -125,7 +125,10 @@
 - MIT License
 
 ### 배포자 및 개발자의 연락처 정보 (Contact Infomration)
+- 
 - leedh2008@naver.com
+- ptsaturn68@gmail.com
+- jungsuna99@gmail.com
 ### 알려진 버그 (Known Issue)
 - ....
 ### 문제 발생에 대한 해결책 (Troubleshooting)
