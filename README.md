@@ -24,6 +24,7 @@
 <img src="https://user-images.githubusercontent.com/69130921/107082961-44ffbc80-6838-11eb-9ea5-0eae9d4319fa.PNG"><br></div><br>
 
  - 플레이스를 만들고 싶을땐 이름, 제한인원수, 태그, 자신의 썸네일 이미지, 플레이스의 커버 이미지를 지정해 개설할 수 있습니다.</div><br>
+ 
 <img src="https://user-images.githubusercontent.com/69130921/107083209-a6279000-6838-11eb-9e5c-00c48429b2e3.PNG"></div><br><br>
  
 ## 현재 잇-플이 제공하는 서비스는
