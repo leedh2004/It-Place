@@ -17,7 +17,7 @@
  <img src="https://user-images.githubusercontent.com/69130921/107085071-467eb400-683b-11eb-8fc7-b51529d4b7eb.PNG">
  <img src="https://user-images.githubusercontent.com/69130921/107084828-e982fe00-683a-11eb-8f31-2042592f7e9f.PNG">
  <img src="https://user-images.githubusercontent.com/69130921/107084834-eab42b00-683a-11eb-80b3-7eb78b5bfe49.PNG">
- <div>
+ <div><br>
 4. 플레이스에서 친구를 사귈수 있으며 친구 상태에선 서로의 플레이스에 초대할 수 있습니다.<br><br>
 <img src="https://user-images.githubusercontent.com/69130921/107082961-44ffbc80-6838-11eb-9ea5-0eae9d4319fa.PNG"><br>
 5. 플레이스를 만들고 싶을땐 이름, 제한인원수, 태그, 자신의 썸네일 이미지, 플레이스의 커버 이미지를 지정해 개설할 수 있습니다.<br><br>
@@ -32,7 +32,6 @@
 과 같은 서비스 등이 있고, 향후 ... 를 제공할 예정입니다!
 
 ## 현황
----
 - 2021 SW중심대학 공동해커톤 산출물
 - 개발기간: \`21.02.04 ~ \`21.02.06
 
@@ -43,7 +42,6 @@
 이범준(호서대학교, 프론트)
 
 ## 개발 배경
----
 코로나 이후로 우리는 더 이상 한 공간에 모이기 조차 조심스럽게 되었습니다.
 
 사람들은 소통을 위한 대안으로 온라인 화상 채팅 앱을 사용하기 시작했고, 이제는 다양한 모임의 성격에 맞는
@@ -51,7 +49,6 @@
 맞춤형 커뮤니티 서비스가 필요해졌습니다. 이에 각 모임의 특성에 맞는 기능을 반영한 '잇-플'을 기획하였습니다.
 
 ### 개발 문서
----
 ###### 초기구상
 ...
 
@@ -62,20 +59,19 @@
 
 ---
 
-###### 기술스택
-Flutter
-
-...
-
----
-
-###### 백엔드
+## 기술스택
+##### SDK, API
+- RemoteMonster
+- Naver CLOVA Face Recognition
+##### 백엔드
 - RESTful API
-- ...
+- Express
+- MYSQL
+- AWS
 
-###### 프론트엔드
+##### 프론트엔드
 - Provider Design Pattern
-- ...
+- Android
 
 ###### 참고자료
 - ...
