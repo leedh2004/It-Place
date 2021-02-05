@@ -53,6 +53,7 @@ class HomeFragment : Fragment() {
                 Log.d("결과", "rid:${d?.rid} | name:${d?.name} | max_num:${d?.max_num} | landscape_url:${d?.landscape_url}")
                 }
             }
+
             override fun onFailure(call: Call<List<Dtos.RoomList>>, t: Throwable) {
                 Log.d("결과", "실패 : ${t.message}")
             }
