@@ -39,8 +39,9 @@
         android:layout_marginRight="24dp"
         android:layout_marginBottom="12dp"
         android:backgroundTint="@color/brown_grey"
-        android:text="@string/room_usage"
-        android:textColor="@color/dark_grey"
+        android:hint="@string/tag_usage"
+        android:textColor="@color/normal_grey"
+        android:textColorHint="@color/normal_grey"
         android:textSize="@dimen/content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -144,8 +145,9 @@
         android:layout_marginRight="24dp"
         android:layout_marginBottom="12dp"
         android:backgroundTint="@color/brown_grey"
-        android:text="@string/tag_usage"
-        android:textColor="@color/dark_grey"
+        android:hint="@string/tag_usage"
+        android:textColor="@color/normal_grey"
+        android:textColorHint="@color/normal_grey"
         android:textSize="@dimen/content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -223,11 +225,12 @@
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginBottom="32dp"
+        android:layout_marginTop="64dp"
         app:cardBackgroundColor="@color/purple"
         app:cardCornerRadius="12.5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cover_setting">
 
         <TextView
             android:layout_width="match_parent"

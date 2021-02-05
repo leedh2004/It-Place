@@ -9,4 +9,8 @@ class Place (
     var landscape_url: String,
     var profile_url: String,
     var current_num: Int) : Serializable{
+        init {
+            max_num = 3
+            current_num = 0
+        }
 }
