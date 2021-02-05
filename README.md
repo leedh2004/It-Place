@@ -11,7 +11,7 @@
 <img src="https://user-images.githubusercontent.com/69130921/107082545-ad9a6980-6837-11eb-82d0-984d6837b168.PNG">
 <img src="https://user-images.githubusercontent.com/69130921/107082885-2e596580-6838-11eb-9571-c8f91670351a.PNG"><br>
  </div><br>
-3. 플레이스 안에선 노래, 시청, 주문, 효과, 게임, 촬영과 같은 기능들을 이용할수 있습니다.<br>
+3. 플레이스 안에선 노래, 시청, 주문, 효과, 게임, 촬영과 같은 기능들을 이용할수 있습니다.<br><br>
 <div>
  <img src="https://user-images.githubusercontent.com/69130921/107084996-2b13a900-683b-11eb-955f-7de247c3cd89.PNG">
  <img src="https://user-images.githubusercontent.com/69130921/107085071-467eb400-683b-11eb-8fc7-b51529d4b7eb.PNG">
@@ -19,12 +19,12 @@
  <img src="https://user-images.githubusercontent.com/69130921/107084834-eab42b00-683a-11eb-80b3-7eb78b5bfe49.PNG">
  <div><br>
 4. 플레이스에서 친구를 사귈수 있으며 친구 상태에선 서로의 플레이스에 초대할 수 있습니다.<br><br>
-<img src="https://user-images.githubusercontent.com/69130921/107082961-44ffbc80-6838-11eb-9ea5-0eae9d4319fa.PNG"><br>
+<img src="https://user-images.githubusercontent.com/69130921/107082961-44ffbc80-6838-11eb-9ea5-0eae9d4319fa.PNG"><br><br>
 5. 플레이스를 만들고 싶을땐 이름, 제한인원수, 태그, 자신의 썸네일 이미지, 플레이스의 커버 이미지를 지정해 개설할 수 있습니다.<br><br>
 <img src="https://user-images.githubusercontent.com/69130921/107083209-a6279000-6838-11eb-9e5c-00c48429b2e3.PNG"><br<br>
  
 ## 현재 잇-플이 제공하는 서비스는
- [종강파티]
+ ####종강파티
 - 파티 플레이스 기능을 통해 종강 파티를 집에서도 즐길 수 있습니다.<br>
 - 노래방 모드를 이용할 수 있습니다.<br>
 - 다양한 게임과 얼굴인식을 통한 닮은꼴 찾기 등 재미있는 기능들을 이용할 수 있습니다.<br>
@@ -35,11 +35,11 @@
 - 2021 SW중심대학 공동해커톤 산출물
 - 개발기간: \`21.02.04 ~ \`21.02.06
 
-김소령(서울여자대학교, 디자이너, 팀장)
-김동규(숭실대학교, 백엔드)
-정선아(충북대학교, 백엔드)
-이도현(한양대학교, 프론트)
-이범준(호서대학교, 프론트)
+김소령(서울여자대학교, 디자이너, 팀장)<br>
+:octocat:김동규(숭실대학교, 백엔드)<br>
+정선아(충북대학교, 백엔드)<br>
+이도현(한양대학교, 프론트)<br>
+이범준(호서대학교, 프론트)<br>
 
 ## 개발 배경
 코로나 이후로 우리는 더 이상 한 공간에 모이기 조차 조심스럽게 되었습니다.
@@ -48,73 +48,69 @@
 
 맞춤형 커뮤니티 서비스가 필요해졌습니다. 이에 각 모임의 특성에 맞는 기능을 반영한 '잇-플'을 기획하였습니다.
 
-### 개발 문서
-###### 초기구상
+## 개발 문서
+#### 초기구상
 ...
 
 ---
 
-###### 초기목표
+#### 초기목표
 ...
 
 ---
 
 ## 기술스택
-##### SDK, API
+#### SDK, API
 - RemoteMonster
 - Naver CLOVA Face Recognition
-##### 백엔드
+#### 백엔드
 - RESTful API
 - Express
 - MYSQL
 - AWS
 
-##### 프론트엔드
+#### 프론트엔드
 - Provider Design Pattern
 - Android
 
-###### 참고자료
+## 참고자료
 - ...
 
 
-### 향후 계획
+## 향후 계획
 ---
-###### 1. 프로젝트 관련
+#### 1. 프로젝트 관련
 ...
 
-###### 2. 서비스 관련
+#### 2. 서비스 관련
 
-### 최종 목표
+## 최종 목표
 ---
 - ...
 
-### 정보
+## 정보
 ---
-###### 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
+#### 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
 - Node.js(예시)
 - Recommende Chrome
 
-###### 설치 안내 (Installation)
+#### 설치 안내 (Installation)
 - ...
-###### 사용법 (Getting Started)
+#### 사용법 (Getting Started)
 - ...
-###### 저작권 및 사용권 정보 (Copyright / End User License)
+#### 저작권 및 사용권 정보 (Copyright / End User License)
 - MIT License
 
-###### 배포자 및 개발자의 연락처 정보 (Contact Infomration)
+#### 배포자 및 개발자의 연락처 정보 (Contact Infomration)
 - leedh2008@naver.com
-###### 알려진 버그 (Known Issue)
+#### 알려진 버그 (Known Issue)
 - ....
-###### 문제 발생에 대한 해결책 (Troubleshooting)
+#### 문제 발생에 대한 해결책 (Troubleshooting)
 - ....
-###### 크레딧 (Credit)
+#### 크레딧 (Credit)
 - ....
-###### 업데이트 정보 (Change Log)
+#### 업데이트 정보 (Change Log)
 - `21.02.04 0.0.1
-
-### 스크린샷
----
-...
 
 ## Git 관리 방법
 
