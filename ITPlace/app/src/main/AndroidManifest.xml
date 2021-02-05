@@ -3,7 +3,7 @@
     package="com.example.it_place">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ITPlace"
         android:usesCleartextTraffic="true">
-        <activity android:name=".EntranceActivity"></activity>
+        <activity android:name=".PlaceActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity android:name=".EntranceActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

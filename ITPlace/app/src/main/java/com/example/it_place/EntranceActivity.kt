@@ -17,7 +17,11 @@ class EntranceActivity : AppCompatActivity() {
         place = intent.getSerializableExtra("place") as Place
         entrance_title.text = place.name
         entrance_tags.text = place.tag
-        Log.d("DEBUG", place.name)
 
+        entrance_button.setOnClickListener {
+            val intent = Intent(this, PlaceActivity::class.java)
+            intent.putExtra("url", "https://itplacewebcam.herokuapp.com/meeting/aaass")
+            startActivity(intent)
+        }
     }
 }
