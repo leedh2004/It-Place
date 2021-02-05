@@ -31,6 +31,6 @@ class PlaceViewHolder(v: View) : RecyclerView.ViewHolder(v) {
     var view : View = v
 
     fun bind(item: Place) {
-        view.place_title.text = item.title
+        view.place_title.text = item.name   //title을 name으로 바꿔놓음
     }
 }
