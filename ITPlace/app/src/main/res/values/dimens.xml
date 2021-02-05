@@ -8,4 +8,8 @@
     <dimen name="entrance_title">24dp</dimen>
     <dimen name="entrance_tag">16dp</dimen>
 
+    <dimen name="small_title">20dp</dimen>
+    <dimen name="content">15dp</dimen>
+
+    <dimen name="select_box">41dp</dimen>
 </resources>

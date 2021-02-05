@@ -18,6 +18,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/entrance_back_button"
+        android:layout_width="@dimen/small_title"
+        android:layout_height="@dimen/small_title"
+        android:layout_marginLeft="36dp"
+        android:src="@drawable/arrow"
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
     <TextView
         android:id="@+id/entrance_title"
         android:layout_width="wrap_content"
@@ -49,7 +60,7 @@
         android:layout_marginRight="64dp"
         android:layout_marginBottom="32dp"
         app:cardBackgroundColor="@color/purple"
-        app:cardCornerRadius="50dp"
+        app:cardCornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
