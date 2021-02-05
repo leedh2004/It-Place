@@ -49,12 +49,12 @@
 맞춤형 커뮤니티 서비스가 필요해졌습니다. 이에 각 모임의 특성에 맞는 기능을 반영한 '잇-플'을 기획하였습니다.
 
 ## 개발 문서
-#### 초기구상
+### 초기구상
 ...
 
 
 
-#### 초기목표
+### 초기목표
 ...
 
 
@@ -63,13 +63,13 @@
 ### SDK, API
 - RemoteMonster
 - Naver CLOVA Face Recognition
-#### 백엔드
+### 백엔드
 - RESTful API
 - Express
 - MYSQL
 - AWS
 
-#### 프론트엔드
+### 프론트엔드
 - Provider Design Pattern
 - Android
 
@@ -78,38 +78,38 @@
 
 
 ## 향후 계획
----
-#### 1. 프로젝트 관련
+
+### 1. 프로젝트 관련
 ...
 
-#### 2. 서비스 관련
+### 2. 서비스 관련
 
 ## 최종 목표
----
+
 - ...
 
 ## 정보
----
-#### 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
+
+### 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
 - Node.js(예시)
 - Recommende Chrome
 
-#### 설치 안내 (Installation)
+### 설치 안내 (Installation)
 - ...
-#### 사용법 (Getting Started)
+### 사용법 (Getting Started)
 - ...
-#### 저작권 및 사용권 정보 (Copyright / End User License)
+### 저작권 및 사용권 정보 (Copyright / End User License)
 - MIT License
 
-#### 배포자 및 개발자의 연락처 정보 (Contact Infomration)
+### 배포자 및 개발자의 연락처 정보 (Contact Infomration)
 - leedh2008@naver.com
-#### 알려진 버그 (Known Issue)
+### 알려진 버그 (Known Issue)
 - ....
-#### 문제 발생에 대한 해결책 (Troubleshooting)
+### 문제 발생에 대한 해결책 (Troubleshooting)
 - ....
-#### 크레딧 (Credit)
+### 크레딧 (Credit)
 - ....
-#### 업데이트 정보 (Change Log)
+### 업데이트 정보 (Change Log)
 - `21.02.04 0.0.1
 
 ## Git 관리 방법
