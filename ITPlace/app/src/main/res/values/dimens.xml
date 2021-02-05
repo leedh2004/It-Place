@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="home_title">18dp</dimen>
+    <dimen name="place_title">15dp</dimen>
+    <dimen name="place_tag">12dp</dimen>
+    <dimen name="image_button">25dp</dimen>
+</resources>
