@@ -3,7 +3,7 @@
 - 코로나 이슈로 대면 만남이 어려워진 언택트(Untact) 시대.<br>
 - 각자의 공간에서도 친밀감을 형성하고, 추억을 쌓을 수 있는 새로운 방안을 제시합니다.<br>
 
-## 잇-플의 이용방법:page_facing_up:
+## 잇-플의 이용방법 :page_facing_up:
 - 앱을 들어가면 개인 정보 없이 핸드폰 고유 번호를 이용해 자동으로 회원가입이 진행됩니다.(익명성)<br><br>
 - 메인화면에는 현재 생성된 플레이스들이 있는데 제목, 참여중인 인원수, 카테고리를 살펴 보거나 검색 기능을 통해 자기가 원하는 플레이스에 참여할 수 있습니다.<br>
 <div>
@@ -12,18 +12,18 @@
 <img src="https://user-images.githubusercontent.com/69130921/107082885-2e596580-6838-11eb-9571-c8f91670351a.PNG"><br>
  </div><br>
  
-- 플레이스 안에선 노래, 시청, 주문, 효과, 게임, 촬영과 같은 기능들을 이용할수 있습니다.<br><br>
+- 플레이스 안에선 노래, 시청, 주문, 효과, 게임, 촬영과 같은 기능들을 이용할수 있습니다.<br>
 <div>
  <img src="https://user-images.githubusercontent.com/69130921/107084996-2b13a900-683b-11eb-955f-7de247c3cd89.PNG">
  <img src="https://user-images.githubusercontent.com/69130921/107085071-467eb400-683b-11eb-8fc7-b51529d4b7eb.PNG">
  <img src="https://user-images.githubusercontent.com/69130921/107084828-e982fe00-683a-11eb-8f31-2042592f7e9f.PNG">
  <img src="https://user-images.githubusercontent.com/69130921/107084834-eab42b00-683a-11eb-80b3-7eb78b5bfe49.PNG">
- <div><br>
+ <div>
   
-- 플레이스에서 친구를 사귈수 있으며 친구 상태에선 서로의 플레이스에 초대할 수 있습니다.<br><br>
+- 플레이스에서 친구를 사귈수 있으며 친구 상태에선 서로의 플레이스에 초대할 수 있습니다.<br>
 <img src="https://user-images.githubusercontent.com/69130921/107082961-44ffbc80-6838-11eb-9ea5-0eae9d4319fa.PNG"><br><br>
 
-- 플레이스를 만들고 싶을땐 이름, 제한인원수, 태그, 자신의 썸네일 이미지, 플레이스의 커버 이미지를 지정해 개설할 수 있습니다.<br><br>
+- 플레이스를 만들고 싶을땐 이름, 제한인원수, 태그, 자신의 썸네일 이미지, 플레이스의 커버 이미지를 지정해 개설할 수 있습니다.<br>
 <img src="https://user-images.githubusercontent.com/69130921/107083209-a6279000-6838-11eb-9e5c-00c48429b2e3.PNG"><br<br>
  <br>
  
