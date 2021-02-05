@@ -7,13 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.it_place.R
+import com.example.it_place.retrofit.Retrofit.service
 import com.example.it_place.retrofit.dto.Dtos
-import com.example.it_place.retrofit.service.RetrofitService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,14 +26,6 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class HomeFragment : Fragment() {
-    //TEST BASE URL
-    val BASE_URL_TEST = "https://jsonplaceholder.typicode.com/"
-
-    //api 통신
-    val retrofit = Retrofit.Builder()
-        .baseUrl(BASE_URL_TEST)
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
 
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -52,19 +43,21 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        //API RESPONSE
-        val api = retrofit.create(RetrofitService::class.java)
-        val call = api.getTests(1)
-        call.enqueue(object : Callback<Dtos.TestGetDto>{
-            override fun onResponse(call: Call<Dtos.TestGetDto>, response: Response<Dtos.TestGetDto>) {
-                val data = response.body()
-                Log.d("결과", "성공 : ${response.raw()}")
-                Log.d("결과", "userId:${data?.userId} | id:${data?.id} | title:${data?.title} | completed:${data?.completed}")
+        //====================방목록 data에 List형태로 존재====================================
+        val call = service.roomList()
+        call.enqueue(object : Callback<List<Dtos.RoomList>>{
+            override fun onResponse(call: Call<List<Dtos.RoomList>>, response: Response<List<Dtos.RoomList>>) {
+                val data:List<Dtos.RoomList>? = response.body()
+                Log.d("결과", "성공 : ${response.raw()}\n")
+                data?.forEach { d ->
+                Log.d("결과", "rid:${d?.rid} | name:${d?.name} | max_num:${d?.max_num} | landscape_url:${d?.landscape_url}")
+                }
             }
-            override fun onFailure(call: Call<Dtos.TestGetDto>, t: Throwable) {
+            override fun onFailure(call: Call<List<Dtos.RoomList>>, t: Throwable) {
                 Log.d("결과", "실패 : ${t.message}")
             }
         })
+        //======================================================================================
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
