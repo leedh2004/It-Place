@@ -51,19 +51,11 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val placeList: ArrayList<Place> =
-            intent.getSerializableExtra("placeList") as ArrayList<Place>
-
-
         val navigation: BottomNavigationView = findViewById(R.id.navigation)
         navigation.setOnNavigationItemSelectedListener(this)
 
-        val homeFragment = HomeFragment()
-        val bundle = Bundle()
-        bundle.putSerializable("placeList", placeList)
-        homeFragment.arguments = bundle
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragmentLayout, homeFragment)
+        transaction.replace(R.id.fragmentLayout, HomeFragment())
         transaction.commit()
 
     }

@@ -15,9 +15,9 @@ class EntranceActivity : AppCompatActivity() {
         setContentView(R.layout.activity_entrance)
 
         place = intent.getSerializableExtra("place") as Place
-        entrance_title.text = place.title
+        entrance_title.text = place.name
         entrance_tags.text = place.tag
-        Log.d("DEBUG", place.title)
+        Log.d("DEBUG", place.name)
 
     }
 }

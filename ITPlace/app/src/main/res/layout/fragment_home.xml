@@ -14,7 +14,7 @@
         android:gravity="left"
         android:layout_marginTop="32dp"
         android:text="@string/home_title"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="@dimen/home_title"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
