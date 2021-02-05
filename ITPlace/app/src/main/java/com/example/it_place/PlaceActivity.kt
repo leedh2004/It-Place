@@ -15,6 +15,10 @@ class PlaceActivity : AppCompatActivity() {
         webSettings.setSupportMultipleWindows(false)
         webSettings.javaScriptEnabled = true
         webSettings.loadWithOverviewMode = true
+        place.isVerticalScrollBarEnabled = false
+        place.isHorizontalScrollBarEnabled = false
+        place.isVerticalFadingEdgeEnabled = false
+        place.isHorizontalFadingEdgeEnabled = false
         place.loadUrl("https://itplacewebcam.herokuapp.com/meeting/aaass")
     }
 }
