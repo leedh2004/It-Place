@@ -54,6 +54,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         val placeList: ArrayList<Place> =
             intent.getSerializableExtra("placeList") as ArrayList<Place>
 
+
         val navigation: BottomNavigationView = findViewById(R.id.navigation)
         navigation.setOnNavigationItemSelectedListener(this)
 

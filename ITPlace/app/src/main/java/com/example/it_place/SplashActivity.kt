@@ -19,6 +19,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
+
         val uuid: String = Settings.Secure.getString(this.contentResolver, Settings.Secure.ANDROID_ID)
 
         //====================방목록 data에 List형태로 존재====================================
@@ -43,6 +44,7 @@ class SplashActivity : AppCompatActivity() {
                 Log.d("결과", "실패 : ${t.message}")
             }
         })
+
 
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, MainActivity::class.java)

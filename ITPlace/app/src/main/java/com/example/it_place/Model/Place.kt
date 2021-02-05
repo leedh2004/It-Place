@@ -9,5 +9,4 @@ class Place (
     var landscape_url: String,
     var profile_url: String,
     var current_num: Int) : Serializable{
-
 }

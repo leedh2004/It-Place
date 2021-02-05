@@ -9,18 +9,26 @@ import com.example.it_place.R
 import kotlinx.android.synthetic.main.item_place.view.*
 
 class PlaceListAdapter(private val itemList : List<Place>) : RecyclerView.Adapter<PlaceViewHolder>()  {
+class PlaceListAdapter(private val itemList: List<Place>) :
+    RecyclerView.Adapter<PlaceViewHolder>() {
 
     override fun getItemCount(): Int {
         return itemList.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlaceViewHolder {
-        val inflatedView = LayoutInflater.from(parent.context).inflate(R.layout.item_place, parent, false)
+
+        val inflatedView =
+            LayoutInflater.from(parent.context).inflate(R.layout.item_place, parent, false)
         return PlaceViewHolder(inflatedView)
     }
 
     override fun onBindViewHolder(holder: PlaceViewHolder, position: Int) {
         val item = itemList[position]
+
+        holder.itemView.setOnClickListener {
+            itemClickListener.onClick(it, position)
+        }
         holder.apply {
             bind(item)
         }
@@ -34,3 +42,23 @@ class PlaceViewHolder(v: View) : RecyclerView.ViewHolder(v) {
         view.place_title.text = item.name   //title을 name으로 바꿔놓음
     }
 }
+
+    interface OnItemClickListener {
+        fun onClick(v: View, position: Int)
+    }
+
+    private lateinit var itemClickListener: OnItemClickListener
+
+    fun setItemClickListener(itemClickListener: OnItemClickListener) {
+        this.itemClickListener = itemClickListener
+    }
+}
+
+class PlaceViewHolder(v: View) : RecyclerView.ViewHolder(v) {
+    var view: View = v
+
+    fun bind(item: Place) {
+        view.place_title.text = item.name   //title을 name으로 바꿔놓음
+    }
+}
+

@@ -4,4 +4,8 @@
     <dimen name="place_title">15dp</dimen>
     <dimen name="place_tag">12dp</dimen>
     <dimen name="image_button">25dp</dimen>
+
+    <dimen name="entrance_title">24dp</dimen>
+    <dimen name="entrance_tag">16dp</dimen>
+
 </resources>

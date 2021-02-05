@@ -1,6 +1,8 @@
 package com.example.it_place.Fragment
 
+
 import Retrofit.service
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -20,6 +22,18 @@ import retrofit2.Response
 
 class HomeFragment : Fragment() {
     var list: ArrayList<Place> = ArrayList()
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.it_place.Adapter.PlaceListAdapter
+import com.example.it_place.EntranceActivity
+import com.example.it_place.MainActivity
+import com.example.it_place.Model.Place
+import com.example.it_place.R
+import kotlinx.android.synthetic.main.fragment_home.*
+
+class HomeFragment : Fragment() {
+
+ 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,6 +46,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         //====================방목록 data에 List형태로 존재====================================
         val call = service.placeList()
         call.enqueue(object : Callback<List<Place>> {
@@ -48,8 +63,25 @@ class HomeFragment : Fragment() {
                         "name:${d?.name} | max_num:${d?.max_num} | tag:${d?.tag} | landscape_url:${d?.landscape_url}" +
                                 " | profile_url:${d.profile_url} | current_num:${d.current_num}"
                     ) //RESTAPI는 잘 받았는지 확인
+        val adapter = PlaceListAdapter(placeList)
+        val layoutManager = LinearLayoutManager(view.context)
+        place_list.layoutManager = layoutManager
+
+        adapter.setItemClickListener(object : PlaceListAdapter.OnItemClickListener {
+            override fun onClick(v: View, position: Int) {
+                val item = placeList[position]
+//                item.title = item.title + "1"
+
+                activity?.let {
+                    val intent = Intent(context, EntranceActivity::class.java)
+                    intent.putExtra("place", item)
+                    startActivity(intent)
+
                 }
+
+                adapter.notifyDataSetChanged()
             }
+
             override fun onFailure(call: Call<List<Place>>, t: Throwable) {
                 Log.d("결과", "실패 : ${t.message}")
             }
@@ -68,3 +100,11 @@ class HomeFragment : Fragment() {
     }
 
 }
+
+        })
+
+        place_list.adapter = adapter
+    }
+}
+
+
