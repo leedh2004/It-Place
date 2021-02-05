@@ -6,7 +6,7 @@
 
 ## 잇-플의 이용방법
 1. 앱을 들어가면 개인 정보 없이 핸드폰 고유 번호를 이용해 자동으로 회원가입이 진행됩니다.(익명성)<br>
-<img srt="https://user-images.githubusercontent.com/69130921/107082270-4a103c00-6837-11eb-93d0-16e004cc830b.PNG">
+<img src="https://user-images.githubusercontent.com/69130921/107082270-4a103c00-6837-11eb-93d0-16e004cc830b.PNG"><br>
 2. 메인화면에는 현재 생성된 방들이 있는데 제목, 참여중인 인원수, 카테고리를 보며 자기가 원하는 방에 참여할 수 있습니다.
 3. 
  
