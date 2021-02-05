@@ -11,17 +11,23 @@
 <img src="https://user-images.githubusercontent.com/69130921/107082545-ad9a6980-6837-11eb-82d0-984d6837b168.PNG">
 <img src="https://user-images.githubusercontent.com/69130921/107082885-2e596580-6838-11eb-9571-c8f91670351a.PNG"><br>
  </div><br>
-3. 플레이스에서 친구를 사귈수 있으며 친구 상태에선 서로의 플레이스에 초대할 수 있습니다.<br><br>
+3. 플레이스 안에선 노래, 시청, 주문, 효과, 게임, 촬영과 같은 기능들을 이용할수 있습니다.<br>
+<div>
+ <img src="https://user-images.githubusercontent.com/69130921/107084130-fce19980-6839-11eb-81d0-eb6533bd01c2.PNG">
+ <img src="https://user-images.githubusercontent.com/69130921/107084828-e982fe00-683a-11eb-8f31-2042592f7e9f.PNG">
+ <img src="https://user-images.githubusercontent.com/69130921/107084834-eab42b00-683a-11eb-80b3-7eb78b5bfe49.PNG">
+ <div>
+4. 플레이스에서 친구를 사귈수 있으며 친구 상태에선 서로의 플레이스에 초대할 수 있습니다.<br><br>
 <img src="https://user-images.githubusercontent.com/69130921/107082961-44ffbc80-6838-11eb-9ea5-0eae9d4319fa.PNG"><br>
-4. 플레이스를 만들고 싶을땐 이름, 제한인원수, 태그, 자신의 썸네일 이미지, 플레이스의 커버 이미지를 지정해 개설할 수 있습니다.<br><br>
+5. 플레이스를 만들고 싶을땐 이름, 제한인원수, 태그, 자신의 썸네일 이미지, 플레이스의 커버 이미지를 지정해 개설할 수 있습니다.<br><br>
 <img src="https://user-images.githubusercontent.com/69130921/107083209-a6279000-6838-11eb-9e5c-00c48429b2e3.PNG"><br<br>
  
 ## 현재 잇-플이 제공하는 서비스는
-- 종강파티
-  파티 플레이스 기능을 통해 종강 파티를 집에서도 즐길 수 있습니다.<br>
-  노래방 모드를 이용할 수 있습니다.<br>
-  다양한 게임과 얼굴인식을 통한 닮은꼴 찾기 등 재미있는 기능들을 이용할 수 있습니다.<br>
--
+ [종강파티]
+- 파티 플레이스 기능을 통해 종강 파티를 집에서도 즐길 수 있습니다.<br>
+- 노래방 모드를 이용할 수 있습니다.<br>
+- 다양한 게임과 얼굴인식을 통한 닮은꼴 찾기 등 재미있는 기능들을 이용할 수 있습니다.<br>
+
 과 같은 서비스 등이 있고, 향후 ... 를 제공할 예정입니다!
 
 ## 현황
