@@ -4,7 +4,6 @@ var hidden = false;
 window.onload = async () => {
     var userid = document.getElementById("userid").value;
     var roomNumber = document.getElementById("roomNumber").value;
-    var localvideo = document.getElementsByTagName("video")[0];
 
     const config = {
         credential: {
@@ -94,16 +93,47 @@ window.onload = async () => {
         }
         var realmsg = msg.substr(msg.indexOf(":-:") + 3, msg.length);
         var item = document.createElement('li');
-        item.textContent = realmsg;
+        var mesid = realmsg.substr(0, realmsg.indexOf(" : "));
+        var dummySrc = 'https://swhackathon.com/writable/uploads/1612294605_6a7cdedbb5143c80bb8d.png';
+
+        realmsg = realmsg.substr(realmsg.indexOf(" : ") + 3, realmsg.length);
+        if (mesid == userid) {
+            item.classList.add("mychat");
+            item.innerHTML = `
+                <div class="text-wrapper">    
+                <div class="real-text">${realmsg}</div>
+                </div>    
+                `
+        }
+        else {
+            item.innerHTML = `
+                <div class="profile-wrapper">    
+                <img class="chat-profile" src="${dummySrc}">
+                </div>
+                <div class="text-wrapper">    
+                <text class="chat-userid">${mesid}</text>
+                <div class="real-text">${realmsg}</div>
+                </div>    
+                `
+        }
         messages.appendChild(item);
+        var objDiv = document.getElementById("chat-messages");
+        objDiv.scrollTop = objDiv.scrollHeight;
         window.scrollTo(0, document.body.scrollHeight);
     });
 
     var bodyTag = document.getElementsByTagName("body")[0];
     var header = document.getElementsByTagName("header")[0];
     var footer = document.getElementsByTagName("footer")[0];
+    var peopleAside = document.getElementById("side-people");
+    var chatAside = document.getElementById("side-chat");
+    var albumAside = document.getElementById("side-album");
+    var settingAside = document.getElementById("side-setting");
+    var asiders = [peopleAside, chatAside, albumAside, settingAside];
 
+    var timer = 0;
     bodyTag.addEventListener("click", (e) => {
+        timer = 0;
         if (hidden) {
             header.classList.remove("hidden");
             footer.classList.remove("hidden");
@@ -111,7 +141,48 @@ window.onload = async () => {
         else {
             header.classList.add("hidden");
             footer.classList.add("hidden");
+            asiders.forEach((item) => { item.classList.add("hidden"); });
         }
         hidden = !hidden;
     })
+
+    asiders.forEach((aside) => {
+        aside.addEventListener("click", (e) => {
+            e.stopPropagation();
+        })
+    })
+
+    header.addEventListener("click", (e) => { e.stopPropagation() });
+    footer.addEventListener("click", (e) => { e.stopPropagation() });
+
+    var lastLeftSide = "";
+
+    var peopleButton = document.getElementById("people");
+    var chatButton = document.getElementById("chat");
+    var albumButton = document.getElementById("album");
+    var settingButton = document.getElementById("setting");
+    var buttons = [peopleButton, chatButton, albumButton, settingButton];
+    buttons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+            e.stopPropagation();
+            footer.classList.add("hidden");
+            var prev = document.getElementById(lastLeftSide);
+            console.log(prev);
+            console.log(lastLeftSide);
+            if (prev) prev.classList.add("hide");
+            lastLeftSide = "side-" + button.id;
+            document.getElementById(lastLeftSide).classList.remove("hide");
+            document.getElementById(lastLeftSide).classList.remove("hidden");
+        })
+    })
+    setInterval(() => {
+        timer += 100;
+        if (timer > 5000) {
+            header.classList.add("hidden");
+            footer.classList.add("hidden");
+            asiders.forEach((item) => { item.classList.add("hidden"); });
+            hidden = true;
+        }
+    }, 100);
+
 }

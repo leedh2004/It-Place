@@ -10,16 +10,86 @@
     <link rel="stylesheet" type="text/css" href="/static/common.css">
 </head>
 
+
 <body>
     <section>
-        <header></header>
+        <header>
+            <button type="button" id="goback">←</button>
+            <text id="roomname">{{roomNumber}}</text>
+            <button type="button" class="leftheader" id="people">인원</button>
+            <button type="button" class="leftheader" id="chat">채팅</button>
+            <button type="button" class="leftheader" id="album">앨범</button>
+            <button type="button" class="leftheader" id="setting">...</button>
+        </header>
         <footer></footer>
-        <div class="chat-area">
-            <ul id="chat-messages"></ul>
-            <form id="chat-form" action="">
-                <input id="chat-input" autocomplete="off" /><button>Send</button>
-            </form>
-        </div>
+        <aside id="side-people" class="hidden hide">
+            <div id="people-header">
+                참여 인원
+            </div>
+            <ul id="peopleul">
+                <li class="people">
+                    <img
+                        src="https://swhackathon.com/writable/uploads/1612294605_6a7cdedbb5143c80bb8d.png"><text>친구1</text><button>친구추가</button>
+                </li>
+                <li class="people">
+                    <img
+                        src="https://swhackathon.com/writable/uploads/1612294605_6a7cdedbb5143c80bb8d.png"><text>친구2</text>
+                </li>
+                <li class="people">
+                    <img
+                        src="https://swhackathon.com/writable/uploads/1612294605_6a7cdedbb5143c80bb8d.png"><text>친구3</text><button>친구추가</button>
+                </li>
+                <li class="people">
+                    <img
+                        src="https://swhackathon.com/writable/uploads/1612294605_6a7cdedbb5143c80bb8d.png"><text>친구4</text><button>친구추가</button>
+                </li>
+            </ul>
+            <div id="invite">
+                친구 초대 <button class="invite-button"> > </button>
+            </div>
+        </aside>
+        <aside id="side-chat" class="hidden hide">
+            <div class="chat-area">
+                <ul id="chat-messages"></ul>
+                <form id="chat-form" action="">
+                    <input id="chat-input" autocomplete="off" /><button>Send</button>
+                </form>
+            </div>
+        </aside>
+        <aside id="side-album" class="hidden hide">
+            <img> <img> <img> <img> <img> <img> <img> <img> <img>
+            <img> <img> <img> <img>
+        </aside>
+        <aside id="side-setting" class="hidden hide">
+
+            <div id="setting-header">
+                참여 인원
+            </div>
+            <div class="setting-section">
+                <div class="setting-content">
+                    이름 변경 <button class="invite-button"> > </button>
+                </div>
+                <div class="setting-content">
+                    썸네일/커버 <button class="invite-button"> > </button>
+                </div>
+            </div>
+
+            <div class="setting-section">
+                <div class="setting-content">
+                    가상 배경 설정 <button class="invite-button"> > </button>
+                </div>
+                <div class="setting-content">
+                    인원 수 변경 <button class="invite-button"> > </button>
+                </div>
+                <div class="setting-content">
+                    알림 설정 <button class="invite-button"> > </button>
+                </div>
+            </div>
+
+            <div class="setting-content">
+                방 나가기 <button class="invite-button"> > </button>
+            </div>
+        </aside>
         <div class="video-zone">
             <video id="localVideo" autoplay muted></video>
         </div>
