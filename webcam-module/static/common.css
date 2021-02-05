@@ -1,0 +1,242 @@
+*{
+    margin :0;
+    padding :0;
+}
+body{
+    position: relative;
+    width: 812px;
+    height: 375px;
+    
+    background: #ECF0F3;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 50px;    
+
+    z-index: -300;
+}
+
+header, footer{
+    position: absolute;
+    width : 100%;
+    height: 60px;
+    background-color: rgba(255,255,255,0.8);
+    z-index: 30;
+}
+
+header{
+    top : 0px;
+    transition: 0.3s;
+}
+
+footer{
+    bottom : 0px;
+    transition: 0.3s;
+}
+
+header.hidden{
+    top : -70px;
+    transition: 0.3s;
+}
+
+footer.hidden{
+    bottom : -70px;
+    transition: 0.3s;
+}
+
+button.leftheader{    
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    top: 19px;
+
+    background: #C4C4C4;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+
+text#roomname{
+    position: absolute;
+    text-align: center;
+    vertical-align: center;
+    width: 100%;
+    top: 15px;
+}
+
+button#people{    
+    left: 635px;
+}
+
+button#chat{   
+    left: 678px;
+}
+
+button#album{    
+    left: 721px;
+}
+
+button#setting{    
+    left: 764px;
+}
+
+button#goback{
+    position: absolute;
+    top:23px;
+    left:48px;
+    width: 18px;
+    height: 18px;
+}
+
+aside{
+    position: absolute;
+    background-color: rgba(255,255,255,0.8);
+    z-index: 30;
+    
+    right: 0px;
+    top:60px;
+    width: 180px;
+    height: 315px;
+}
+aside.hidden{
+    transition: 0.3s;
+    right: -330px;
+}
+
+aside.hide{
+    visibility: hidden;
+}
+
+
+aside#side-people > *{
+    width:100%;
+}
+
+aside#side-people div#people-header{
+    margin-left: 10px;
+    margin-top: 10px;
+    height:40px;
+}
+aside#side-people ul#peopleul{
+    list-style:none;
+    top:100px;
+    height:40px;
+}
+aside#side-people ul#peopleul li{
+    width:150px;
+    margin-left:10px;
+    margin-bottom:20px;
+}
+aside#side-people ul#peopleul li img{
+    width: 25px;
+    height: 25px;
+}
+aside#side-people ul#peopleul li button{
+    float: right;
+    margin-right: 10px;
+}
+
+aside#side-people div#invite{
+    margin-left: 10px;
+    position: absolute;
+    top:255px;
+    height:40px;
+}
+aside#side-people div#invite button{
+    background: none;
+    border: none;
+    float: right;
+    margin-right: 30px;
+}
+
+#chat-messages {
+    width: 180px;
+    position: absolute;
+    height:250px;
+    overflow-y: scroll;
+    list-style: none;
+    bottom: 50px;
+}
+
+#chat-messages li {
+    width: 100%;
+    display: block;
+    float: left;
+    margin-bottom: 10px;
+}
+.mychat .text-wrapper{
+    width: 100%;
+    float:right;
+}
+.mychat .real-text{
+    float:right;
+}
+#chat-form{
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+}
+#chat-input{
+    width: 100px;
+}
+
+.profile-wrapper{
+    vertical-align: top;
+    display: inline-block;
+    height: 40px;
+    width: 30px;
+}
+.profile-wrapper img{
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    width: 30px;
+    float: left;
+}
+.text-wrapper{
+    display: inline-block;
+    width: 80px;
+}
+
+.chat-userid{
+    display: inline-block;
+    width: 110px;
+    height: 10px;
+    font-size: 8px;
+    margin-bottom: 5px;
+}
+
+.real-text{
+    font-size: 10px;
+    display: inline-block;
+    max-width: 110px;
+    word-break:break-word;
+    overflow: visible;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 0px 6px 6px 6px;
+    padding:3px;
+    margin: 5px;
+}
+
+#side-album{
+    padding:5px;
+    width: 170px;
+    height: 305px;
+    overflow-y: auto;
+}
+#side-album img{
+    background-color: gray;
+    margin: 3px;
+    width: 45px;
+    height: 45px;
+}
+
+#side-setting > div{
+    margin: 15px;
+}
+.setting-section button,
+#side-setting button{
+    background: none;
+    border: none;
+    float: right;
+    margin-right: 30px;
+
+}
