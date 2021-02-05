@@ -1,5 +1,5 @@
 # SW 중심대학 해커톤 - 위플레이:musical_note: 팀
-## 비대면 영상 기반 서비스 :movie_camera: It-Place :headphones: 
+## 비대면 영상 기반 서비스 :microphone: It-Place :headphones: 
 - 코로나 이슈로 대면 만남이 어려워진 언택트(Untact) 시대.<br>
 - 각자의 공간에서도 친밀감을 형성하고, 추억을 쌓을 수 있는 새로운 방안을 제시합니다.<br>
 
