@@ -6,7 +6,6 @@
     <input type="hidden" id="roomNumber" value="{{roomNumber}}">
     <input type="hidden" id="userid" value="{{id}}">
     <script src="/static/js.js"></script>
-    <link rel="stylesheet" type="text/css" href="/static/horizontal.css">
     <link rel="stylesheet" type="text/css" href="/static/common.css">
 </head>
 
@@ -16,82 +15,214 @@
         <header>
             <button type="button" id="goback">←</button>
             <text id="roomname">{{roomNumber}}</text>
-            <button type="button" class="leftheader" id="people">인원</button>
-            <button type="button" class="leftheader" id="chat">채팅</button>
-            <button type="button" class="leftheader" id="album">앨범</button>
-            <button type="button" class="leftheader" id="setting">...</button>
+            <button type="button" class="leftheader" id="people"></button>
+            <button type="button" class="leftheader" id="chat"></button>
+            <button type="button" class="leftheader" id="album"></button>
+            <button type="button" class="leftheader" id="setting"></button>
         </header>
-        <footer></footer>
+        <footer>
+            <div id="footer-button-wapper">
+                <button type="button" class="footer-button" id="garo">가로</button>
+                <button type="button" class="footer-button" id="sero">세로</button>
+                <button type="button" class="footer-button" id="song">노래</button>
+                <button type="button" class="footer-button" id="watch">시청</button>
+                <button type="button" class="footer-button" id="effect">효과</button>
+                <button type="button" class="footer-button" id="game">게임</button>
+                <button type="button" class="footer-button" id="picture">촬영</button>
+                <button type="button" class="footer-button" id="order">주문</button>
+            </div>
+        </footer>
         <aside id="side-people" class="hidden hide">
+            <div class="underbar"></div>
+            <button type="button" value="people" class="side-button side-button-people"></button>
+            <button type="button" value="chat" class="side-button side-button-chat"></button>
+            <button type="button" value="album" class="side-button side-button-album"></button>
+            <button type="button" value="setting" class="side-button side-button-setting"></button>
             <div id="people-header">
                 참여 인원
             </div>
             <ul id="peopleul">
                 <li class="people">
-                    <img
-                        src="https://swhackathon.com/writable/uploads/1612294605_6a7cdedbb5143c80bb8d.png"><text>친구1</text><button>친구추가</button>
+                    <img src="https://swhackathon.com/writable/uploads/1612294605_6a7cdedbb5143c80bb8d.png">
+                    <div>친구1</div>
                 </li>
                 <li class="people">
-                    <img
-                        src="https://swhackathon.com/writable/uploads/1612294605_6a7cdedbb5143c80bb8d.png"><text>친구2</text>
+                    <img src="https://swhackathon.com/writable/uploads/1612294605_6a7cdedbb5143c80bb8d.png">
+                    <div>친구2</div><button>친구 요청</button>
                 </li>
                 <li class="people">
-                    <img
-                        src="https://swhackathon.com/writable/uploads/1612294605_6a7cdedbb5143c80bb8d.png"><text>친구3</text><button>친구추가</button>
+                    <img src="https://swhackathon.com/writable/uploads/1612294605_6a7cdedbb5143c80bb8d.png">
+                    <div>친구3</div><button>친구 요청</button>
                 </li>
                 <li class="people">
-                    <img
-                        src="https://swhackathon.com/writable/uploads/1612294605_6a7cdedbb5143c80bb8d.png"><text>친구4</text><button>친구추가</button>
+                    <img src="https://swhackathon.com/writable/uploads/1612294605_6a7cdedbb5143c80bb8d.png">
+                    <div>친구4</div><button>친구 요청</button>
                 </li>
             </ul>
             <div id="invite">
-                친구 초대 <button class="invite-button"> > </button>
+                친구 초대
             </div>
+            <div class="invite-button"></div>
         </aside>
         <aside id="side-chat" class="hidden hide">
+            <div class="underbar"></div>
+            <button type="button" value="people" class="side-button side-button-people"></button>
+            <button type="button" value="chat" class="side-button side-button-chat"></button>
+            <button type="button" value="album" class="side-button side-button-album"></button>
+            <button type="button" value="setting" class="side-button side-button-setting"></button>
             <div class="chat-area">
                 <ul id="chat-messages"></ul>
                 <form id="chat-form" action="">
-                    <input id="chat-input" autocomplete="off" /><button>Send</button>
+                    <input id="chat-input" autocomplete="off" placeholder="내용을 입력하세요." /><button
+                        id="chat-send">Send</button>
                 </form>
             </div>
         </aside>
         <aside id="side-album" class="hidden hide">
-            <img> <img> <img> <img> <img> <img> <img> <img> <img>
-            <img> <img> <img> <img>
+            <div class="underbar"></div>
+            <button type="button" value="people" class="side-button side-button-people"></button>
+            <button type="button" value="chat" class="side-button side-button-chat"></button>
+            <button type="button" value="album" class="side-button side-button-album"></button>
+            <button type="button" value="setting" class="side-button side-button-setting"></button>
+            <img> <img> <img> <img> <img> <img> <img>
         </aside>
         <aside id="side-setting" class="hidden hide">
-
+            <div class="underbar"></div>
+            <button type="button" value="people" class="side-button side-button-people"></button>
+            <button type="button" value="chat" class="side-button side-button-chat"></button>
+            <button type="button" value="album" class="side-button side-button-album"></button>
+            <button type="button" value="setting" class="side-button side-button-setting"></button>
             <div id="setting-header">
-                참여 인원
+                설정
             </div>
             <div class="setting-section">
                 <div class="setting-content">
-                    이름 변경 <button class="invite-button"> > </button>
+                    방 이름 <button class="invite-button"> </button>
                 </div>
                 <div class="setting-content">
-                    썸네일/커버 <button class="invite-button"> > </button>
+                    가상 배경 <button class="invite-button"> </button>
+                </div>
+                <div class="setting-content">
+                    태그 <button class="invite-button"> </button>
+                </div>
+                <div class="setting-content">
+                    썸네일/커버 <button class="invite-button"> </button>
+                </div>
+                <div class="setting-content">
+                    제한 인원 수 <button class="invite-button"> </button>
+                </div>
+                <div class="setting-content">
+                    알림 설정 <button class="invite-button"> </button>
                 </div>
             </div>
 
-            <div class="setting-section">
-                <div class="setting-content">
-                    가상 배경 설정 <button class="invite-button"> > </button>
-                </div>
-                <div class="setting-content">
-                    인원 수 변경 <button class="invite-button"> > </button>
-                </div>
-                <div class="setting-content">
-                    알림 설정 <button class="invite-button"> > </button>
-                </div>
-            </div>
-
-            <div class="setting-content">
-                방 나가기 <button class="invite-button"> > </button>
+            <div class="underbar2"></div>
+            <div class="setting-out">
+                방 나가기
             </div>
         </aside>
         <div class="video-zone">
-            <video id="localVideo" autoplay muted></video>
+            <video id="localVideo" class="videos" autoplay muted></video>
+        </div>
+        <div id="game-zone"></div>
+        <div id="game-pannel">
+            <div id="pannel-song" class="hide">
+                <div class="pannel-search">노래 제목을 입력하세요.</div>
+                <div class="pannel-search-icon"></div>
+                <div class="search-line"></div>
+                <div class="best">BEST 10</div>
+                <div class="bestcontainer">
+                    <div class="bestcontents">
+
+                    </div>
+                    <div class="bestcontents">
+
+                    </div>
+                    <div class="bestcontents">
+
+                    </div>
+                </div>
+                <div class="dosong">노래부를 사랍의 화면을 더블 탭하세요!</div>
+                <div class="orderdsong">예약 목록</div>
+                <div class="orderedContents1">
+                    1. Celebrity - 아이유
+                </div>
+                <div class="orderedContents2">
+                    2. 밤하늘의 별을(2020) - 경서
+                </div>
+                <div class="orderedContents3">
+                    3. 잠이 오질 않네요 - 장범준
+                </div>
+            </div>
+            <div id="pannel-watch" class="hide">
+                <div class="pannel-search">영화 제목을 입력하세요.</div>
+                <div class="pannel-search-icon"></div>
+                <div class="now-pop">지금 인기있는 영상</div>
+                <div class="pannel-contents">
+                    <div class="pannel-content"></div>
+                    <div class="pannel-content"></div>
+                    <div class="pannel-content"></div>
+                    <div class="pannel-content"></div>
+                    <div class="pannel-content"></div>
+                    <div class="pannel-content"></div>
+                    <div class="pannel-content"></div>
+                </div>
+            </div>
+            <div id="pannel-effect" class="hide">
+                <div class="effect">효과음</div>
+
+                <div class="effect-contents">
+                    <div id="effect-content"></div>
+                    <div class="effect-content" id="effect-clap">
+                        <div>박수</div>
+                        <img src="/static/img/clapping.png" width="20px" height="20px">
+                    </div>
+                    <div class="effect-content" id="effect-zzan">
+                        <div>건배</div>
+                        <img src="/static/img/wine.png" width="20px" height="20px">
+                    </div>
+                    <div class="effect-content" id="effect-laugh">
+                        <div>웃음</div>
+                        <img src="/static/img/laugh.png" width="20px" height="20px">
+                    </div>
+                    <div class="effect-content" id="effect-sad">
+                        <div>슬픔</div>
+                        <img src="/static/img/depression.png" width="20px" height="20px">
+                    </div>
+                    <div class="effect-content" id="effect-woo">
+                        <div>야유</div>
+                        <img src="/static/img/thumbs-down.png" width="20px" height="20px">
+                    </div>
+                    <div class="effect-content" id="effect-ing">
+                        <div>황당</div>
+                        <img src="/static/img/depressed.png" width="20px" height="20px">
+                    </div>
+                    <div class="effect-content" id="effect-bbyong">
+                        <div>뿅망치</div>
+                        <img src="/static/img/hammer.png" width="20px" height="20px">
+                    </div>
+                    <div class="effect-content" id="effect-firework">
+                        <div>폭죽</div>
+                        <img src="/static/img/firework.png" width="20px" height="20px">
+                    </div>
+                </div>
+            </div>
+            <div id="pannel-game" class="hide">
+                <div class="effect">게임</div>
+                <div class="game-content" id="game1">
+                    <div>닮은 꼴 연예인 찾기</div>
+                </div>
+                <div class="game-content" id="game2">
+                    <div>복불복 게임</div>
+                </div>
+                <div class="game-content" id="game3">
+                    <div>마니또 게임</div>
+                </div>
+            </div>
+            <div id="pannel-order" class="hide">주문
+                <div class="pannel-search"><button class="pannel-search-button"></button></div>
+                <div class="pannel-contents"></div>
+            </div>
         </div>
     </section>
 </body>
