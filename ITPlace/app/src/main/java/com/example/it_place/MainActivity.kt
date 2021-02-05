@@ -49,11 +49,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // 웹뷰 테스트 코
-        val myWebView: WebView = findViewById(R.id.wv)
-        myWebView.loadUrl("https://www.google.com")
-        myWebView.stopLoading()
-
         val navigation: BottomNavigationView = findViewById(R.id.navigation)
         navigation.setOnNavigationItemSelectedListener(this)
         

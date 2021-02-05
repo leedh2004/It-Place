@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebView
 import com.example.it_place.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -35,7 +36,15 @@ class NotificationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_notification, container, false)
+        val view = inflater.inflate(R.layout.fragment_notification, container, false)
+        // 웹뷰 테스트 코드
+        val myWebView: WebView = view.findViewById(R.id.wv)
+        val WebSettings = myWebView.settings
+        WebSettings.setSupportMultipleWindows(false)
+        WebSettings.javaScriptEnabled = true
+        WebSettings.loadWithOverviewMode = true
+        myWebView.loadUrl("https://itplacewebcam.herokuapp.com/meeting/aaass")
+        return view
     }
 
     companion object {
