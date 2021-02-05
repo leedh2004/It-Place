@@ -1,11 +1,19 @@
 package com.example.it_place.Fragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.it_place.R
+import com.example.it_place.retrofit.dto.Dtos
+import com.example.it_place.retrofit.service.RetrofitService
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -18,6 +26,14 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class FriendFragment : Fragment() {
+    //TEST BASE URL
+    private val BASE_URL_TEST = "https://jsonplaceholder.typicode.com/"
+    //api 통신
+    private val retrofit = Retrofit.Builder()
+        .baseUrl(BASE_URL_TEST)
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -33,7 +49,22 @@ class FriendFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
     ): View? {
+        //API RESPONSE
+        val api = retrofit.create(RetrofitService::class.java)
+        val call = api.postTests(Dtos.TestPostReqDto(1000, "hi", "testing"))
+        call.enqueue(object : Callback<Dtos.TestPostResDto> {
+            override fun onResponse(call: Call<Dtos.TestPostResDto>, response: Response<Dtos.TestPostResDto>) {
+                val data = response.body()
+                Log.d("결과", "성공 : ${response.raw()}")
+                Log.d("결과", "id:${data?.id} | title:${data?.title} | body:${data?.body} | userId:${data?.userId}")
+            }
+            override fun onFailure(call: Call<Dtos.TestPostResDto>, t: Throwable) {
+                Log.d("결과", "실패 : ${t.cause}")
+            }
+        })
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_friend, container, false)
     }

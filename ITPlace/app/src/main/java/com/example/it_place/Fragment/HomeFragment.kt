@@ -30,6 +30,12 @@ class HomeFragment : Fragment() {
     //TEST BASE URL
     val BASE_URL_TEST = "https://jsonplaceholder.typicode.com/"
 
+    //api 통신
+    val retrofit = Retrofit.Builder()
+        .baseUrl(BASE_URL_TEST)
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -41,30 +47,25 @@ class HomeFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
 
-        //api 통신 test
-        val retrofit = Retrofit.Builder()
-            .baseUrl(BASE_URL_TEST)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-        val api = retrofit.create(RetrofitService::class.java)
-        val call = api.getTests(1)
-
-        call.enqueue(object : Callback<Dtos.TestDto>{
-            override fun onResponse(call: Call<Dtos.TestDto>, response: Response<Dtos.TestDto>) {
-                val data = response.body()
-                Log.d("결과", "성공 : ${response.raw()}")
-                Log.d("결과", "userId:${data?.userId} | id:${data?.id} | title:${data?.title} | completed:${data?.completed}")
-            }
-            override fun onFailure(call: Call<Dtos.TestDto>, t: Throwable) {
-                Log.d("결과", "실패 : ${t.message}")
-            }
-        })
-
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //API RESPONSE
+        val api = retrofit.create(RetrofitService::class.java)
+        val call = api.getTests(1)
+        call.enqueue(object : Callback<Dtos.TestGetDto>{
+            override fun onResponse(call: Call<Dtos.TestGetDto>, response: Response<Dtos.TestGetDto>) {
+                val data = response.body()
+                Log.d("결과", "성공 : ${response.raw()}")
+                Log.d("결과", "userId:${data?.userId} | id:${data?.id} | title:${data?.title} | completed:${data?.completed}")
+            }
+            override fun onFailure(call: Call<Dtos.TestGetDto>, t: Throwable) {
+                Log.d("결과", "실패 : ${t.message}")
+            }
+        })
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
