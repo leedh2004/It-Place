@@ -33,7 +33,39 @@ router.post('/', (req, res) => {
 })
 
 router.get('/', (req, res) => {
-    connection.query('SELECT r.name, r.max_num, r.tag, r.landscape_url, u.profile_url  from room as r, user as u where host_uid = uid', (error, rows, fields) => {
+    const uid = req.headers.authorization.split('Bearer ')[1];
+    sql = `
+        SELECT r.name, r.max_num, r.tag, r.landscape_url, u.profile_url
+        FROM room as r, user as u
+        WHERE host_uid = uid AND r.rid in (
+            SELECT ur.rid
+            FROM user_room as ur
+            WHERE ur.uid = '${uid}'
+        );
+    `;
+    connection.query(sql, (error, rows, fields) => {
+        if (error){
+            console.error(error.stack)
+            res.status(500).send('500 Server Error')
+        }
+        for (row of rows){
+            let result = row
+            result['current_num'] = 2
+            // result['user_thumbnail_url'] = "https://itplace.s3.ap-northeast-2.amazonaws.com/profile.png"
+            console.log(result)
+        }
+        const result = Object.values(JSON.parse(JSON.stringify(rows)));
+        console.log(result)
+        res.send(result)
+    })
+})
+
+router.get('/all', (req, res) => {
+    connection.query(`
+    SELECT r.name, r.max_num, r.tag, r.landscape_url, u.profile_url  
+    from room as r, user as u 
+    where host_uid = uid`
+    , (error, rows, fields) => {
         if (error){
             console.error(error.stack)
             res.status(500).send('500 Server Error')
