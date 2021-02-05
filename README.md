@@ -26,7 +26,7 @@
 <img src="https://user-images.githubusercontent.com/69130921/107082961-44ffbc80-6838-11eb-9ea5-0eae9d4319fa.PNG">
 <img src="https://user-images.githubusercontent.com/69130921/107083209-a6279000-6838-11eb-9e5c-00c48429b2e3.PNG"></div><br>
  :warning: 아직 구현되지 않은 기능도 존재합니다.
- <br>
+ <br><br>
  
 ## 현재 잇-플이 제공하는 서비스는 :low_brightness:
  ### 여러명과 고화질 화상통화
