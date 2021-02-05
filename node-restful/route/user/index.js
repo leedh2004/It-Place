@@ -11,6 +11,9 @@ var connection = require('./../../mysql')
 
 router.post('/', (req, res) => {
     let {uid, image_url, name} = req.body
+    if (image_url == undefined){
+        image_url = "https://itplace.s3.ap-northeast-2.amazonaws.com/profile.png"
+    }
     connection.query(`INSERT INTO user VALUES ('${uid}', '${name}', '${image_url}')`, (err, row, fileds) => {
         if (err) {
             console.error(err.stack)
