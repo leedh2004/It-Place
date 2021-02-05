@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <script src="/node_modules/@remotemonster/sdk/remon.min.js"></script>
+    <script src="https://cdn.socket.io/3.1.1/socket.io.min.js"></script>
+    <input type="hidden" id="roomNumber" value="{{roomNumber}}">
+    <input type="hidden" id="userid" value="{{id}}">
+    <script src="/static/js.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/horizontal.css">
+    <link rel="stylesheet" type="text/css" href="/static/common.css">
+</head>
+
+<body>
+    <section>
+        <header></header>
+        <footer></footer>
+        <div class="chat-area">
+            <ul id="chat-messages"></ul>
+            <form id="chat-form" action="">
+                <input id="chat-input" autocomplete="off" /><button>Send</button>
+            </form>
+        </div>
+        <div class="video-zone">
+            <video id="localVideo" autoplay muted></video>
+        </div>
+    </section>
+</body>
+
+</html>
