@@ -1,12 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var connection = require('./../../mysql');
+const auth = require('./../../middlewares/auth.js')
 
-router.post('/', (req, res) => {
-    const uid = req.headers.authorization.split('Bearer ')[1];
-    console.log(uid)
+router.post('/', auth, (req, res) => {
+    const uid = req.uid
     let {name, image_url, max_num, tags} = req.body
-    console.log(image_url)
     if (image_url == undefined) {
         image_url = "https://itplace.s3.ap-northeast-2.amazonaws.com/land_scape.png"
     }
@@ -14,7 +13,6 @@ router.post('/', (req, res) => {
     INSERT INTO room (name, landscape_url, max_num, tag, host_uid) 
     VALUES ('${name}', '${image_url}', ${max_num}, '${tags}', '${uid}')
     `
-    console.log(sql)
     connection.query(sql, (err, row, fields) => {
         if (err) {
             console.error(err.stack)
@@ -75,8 +73,8 @@ router.get('/albums/:rid', (req, res) => {
     })
 })
 
-router.get('/', (req, res) => {
-    const uid = req.headers.authorization.split('Bearer ')[1];
+router.get('/', auth, (req, res) => {
+    const uid = req.uid
     sql = `
         SELECT r.name, r.max_num, r.tag, r.landscape_url, u.profile_url
         FROM room as r, user as u
