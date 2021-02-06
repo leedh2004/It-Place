@@ -36,4 +36,23 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/enter/:rid', (req, res) => {
+    const rid = req.params.rid
+    const uid = req.headers.authorization.split('Bearer ')[1];
+    if (rid == undefined || uid == undefined) {
+        res.status(401).send("Unathorized!")
+    }
+    let sql = `
+        INSERT INTO user_room
+        VALUES (${uid}, ${rid})
+    `
+    connection.query(sql, (err, row, fileds) => {
+        if (err) {
+            console.error(err.stack)
+            res.status(500).send('500 SQL Server Error')
+        }
+        res.status(200).send('user enter room Insert OK')
+    });
+})
+
 module.exports = router
