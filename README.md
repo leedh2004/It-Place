@@ -58,7 +58,7 @@
 
 맞춤형 커뮤니티 서비스가 필요해졌습니다. 이에 각 모임의 특성에 맞는 기능을 반영한 '잇-플'을 기획하였습니다.
 <br>
-
+<br>
 ## 개발 문서 :page_with_curl:
 ### 초기구상
 
@@ -138,15 +138,15 @@ CREATE TABLE `user_room` (
 ## 향후 계획 :calendar:-->
 <!--
 ### 1. 프로젝트 관련-->
-...
+
 <!--
 ### 2. 서비스 관련-->
-<!--...-->
+
 <!--
 ## 최종 목표 :triangular_flag_on_post:-->
-<!-- - ...-->
 
-<br>
+
+<br><br>
 
 ## 정보 :notebook_with_decorative_cover:
 
