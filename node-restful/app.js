@@ -3,7 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const port = process.env.SERVER_PORT
-const path = require('path') 
+const path = require('path')
 var fs = require('fs')
 var client_id = process.env.CLOVA_CLIENT_ID
 var client_secret = process.env.CLOVA_SECRET_KEY
@@ -20,7 +20,7 @@ var connection = require('./mysql')
 // express built in bodyParser
 
 app.use(express.json())
-app.use(express.urlencoded({extended:true}))
+app.use(express.urlencoded({ extended: true }))
 // logging
 app.use(morgan('tiny'))
 
@@ -53,26 +53,27 @@ const upload = multer({
 
 app.post('/face', upload.single('img'), function (req, res) {
   console.log(req.file)
-  
+
   var request = require('request');
   var api_url = 'https://openapi.naver.com/v1/vision/celebrity'; // 유명인 인식
   // var api_url = 'https://openapi.naver.com/v1/vision/face'; // 얼굴 감지
-  console.log(fs.createReadStream('./face/dohyun.jpg'))
 
   var _formData = {
-    image:'image',
+    image: 'image',
     image: fs.createReadStream('./' + req.file.path) // FILE 이름
   };
 
-   var _req = request.post({url:api_url, formData:_formData,
-     headers: {'X-Naver-Client-Id':client_id, 'X-Naver-Client-Secret': client_secret}}).on('response', function(response) {
-      console.log(response.statusCode) // 200
-      console.log(response.headers['content-type'])
-   });
+  var _req = request.post({
+    url: api_url, formData: _formData,
+    headers: { 'X-Naver-Client-Id': client_id, 'X-Naver-Client-Secret': client_secret }
+  }).on('response', function (response) {
+    console.log(response.statusCode) // 200
+    console.log(response.headers['content-type'])
+  });
 
-   console.log( request.head  );
-   _req.pipe(res);
-   // 브라우저로 출력
+  console.log(request.head);
+  _req.pipe(res);
+  // 브라우저로 출력
 });
 
 app.listen(port, () => {

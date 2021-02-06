@@ -8,7 +8,7 @@ button{
     background-color: rgba(0, 0, 0, 0.0);
     border: 0;
 }
-body{
+body, html{
     position: relative;
     width: 585px;
     height: 270px;
@@ -943,3 +943,63 @@ video.sero:nth-child(4){
 #game3{
     top: 221px;
 }
+
+
+.singing{
+    position: fixed!important; 
+    width: 356px!important; 
+    height: 200px!important;
+    top:9px!important;
+    left:25px!important;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+video:nth-child(n+5){
+    visibility: hidden;
+}
+
+.game-content img{
+    position: absolute;
+    top:20px;
+    left:55px;
+}
+
+.killit{
+    font-family: Apple SD Gothic Neo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 135%;
+    /* identical to box height, or 11px */
+    
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+    position:fixed;
+    background-size:cover;
+}
+
+.killit0{
+    top:50px;
+    left:100px;
+}
+
+.killit1{
+    top:50px;
+    left:300px;
+}
+
+.killit2{
+    top:150px;
+    left:100px;
+}
+
+.killit3{
+    top:150px;
+    left:300px;
+}
+
+
+
