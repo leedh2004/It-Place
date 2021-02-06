@@ -4,7 +4,6 @@
 - 각자의 공간에서도 친밀감을 형성하고, 추억을 쌓을 수 있는 새로운 방안을 제시합니다.<br>
 
 ## 잇-플의 이용방법 :page_facing_up:
-- 앱을 들어가면 개인 정보 없이 자동으로 회원가입이 진행됩니다.(익명성)<br><br>
 - 메인화면에는 현재 생성된 플레이스들이 있는데 제목, 참여중인 인원수, 카테고리를 살펴 보거나 검색 기능을 통해 자기가 원하는 플레이스에 참여할 수 있습니다.<br>
 <div>
 <img src="https://user-images.githubusercontent.com/69130921/107082270-4a103c00-6837-11eb-93d0-16e004cc830b.PNG">
@@ -46,9 +45,9 @@
 - 개발기간: \`21.02.04 ~ \`21.02.06
 
 #### :snowman:김소령(서울여자대학교, 디자이너, 팀장)<br>
-#### :soccer:김동규(숭실대학교, 백엔드)<br>
+#### :soccer:김동규(숭실대학교, )<br>
 #### :two_hearts:정선아(충북대학교, 백엔드)<br>
-#### :earth_americas:이도현(한양대학교, 프론트)<br>
+#### :earth_americas:이도현(한양대학교, 백엔드)<br>
 #### :christmas_tree:이범준(호서대학교, 프론트)<br>
 <br>
 
@@ -62,9 +61,51 @@
 
 ## 개발 문서 :page_with_curl:
 ### 초기구상
-...
+
+#### ERD
+<img src="https://user-images.githubusercontent.com/31717177/107100880-f1ea3180-6858-11eb-84c2-c8916052a7c2.jpeg" width=300 >
+
+#### SQL
+
+```sql
+CREATE TABLE `user` (
+	`uid` varchar(64) NOT NULL PRIMARY KEY,
+	`name` varchar(20) NOT NULL,
+	`profile_url` varchar(128) DEFAULT "https://itplace.s3.ap-northeast-2.amazonaws.com/profile.png"
+);
+
+CREATE TABLE `friend` (
+	`from` varchar(64) NOT NULL,
+	`to` varchar(64) NOT NULL,
+	PRIMARY KEY (`from`, `to`),
+	CONSTRAINT `fk_from` FOREIGN KEY (`from`) REFERENCES `user` (`uid`) ON DELETE CASCADE,
+	CONSTRAINT `fk_to` FOREIGN KEY (`to`) REFERENCES `user` (`uid`) ON DELETE CASCADE
+);
+
+CREATE TABLE `room` (
+	`rid` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(20) NOT NULL,
+ `max_num` int DEFAULT 4,
+ `landscape_url` varchar(128),
+ `host_uid` varchar(64) NOT NULL,
+ CONSTRAINT fk_host_uid FOREIGN KEY (host_uid) REFERENCES user (uid) ON DELETE CASCADE;
+);
+
+CREATE TABLE `album` (
+	`image_url` varchar(128) NOT NULL PRIMARY KEY,
+	`rid` int NOT NULL,
+	CONSTRAINT `fk_album_rid` FOREIGN KEY (`rid`) REFERENCES `room` (`rid`) ON DELETE CASCADE
+);
 
 
+CREATE TABLE `user_room` (
+	`uid` varchar(64) NOT NULL,
+	`rid` int NOT NULL,
+	PRIMARY KEY (`uid`, `rid`),
+	CONSTRAINT `fk_ur_uid` FOREIGN KEY (`uid`) REFERENCES `user` (`uid`) ON DELETE CASCADE,
+	CONSTRAINT `fk_ur_rid` FOREIGN KEY (`rid`) REFERENCES `room` (`rid`) ON DELETE CASCADE
+);
+```
 
 ### 초기목표
 ...
@@ -78,20 +119,20 @@
 - Naver CLOVA Face Recognition
 
 ### 백엔드
-- RESTful API
-- Express
-- MYSQL
-- AWS
+- Node.js(Express), RESTful API, AWS Hosting
+- AWS MYSQL Server
+- AWS S3 Container
 
 ### 프론트엔드
-- Provider Design Pattern
 - Android
+- HTML, CSS, JS
 
 <br>
 
 ## 참고자료 :scroll:
-- ...
-
+- RemoteMonster Offical Documnet
+- Express Official Document
+- AWS Official Documnet
 
 <br>
 
@@ -117,9 +158,20 @@
 - Recommende Chrome
 
 ### 설치 안내 (Installation)
-- ...
+
+```
+$ npm i
+$ npm i -g pm2
+```
+
+.env 파일이 존재해야 합니다.
+
 ### 사용법 (Getting Started)
-- ...
+
+```
+$ npm run-script run
+```
+
 ### 저작권 및 사용권 정보 (Copyright / End User License)
 - MIT License
 
@@ -129,14 +181,19 @@
 - ptsaturn68@gmail.com
 - jungsuna99@gmail.com
 - qjawnswkd@gmail.com
+
 ### 알려진 버그 (Known Issue)
 - ....
+
 ### 문제 발생에 대한 해결책 (Troubleshooting)
 - ....
+
 ### 크레딧 (Credit)
 - ....
+
 ### 업데이트 정보 (Change Log)
 - `21.02.04 0.0.1
+- `21.02.06 0.1.0
 
 <br>
 
