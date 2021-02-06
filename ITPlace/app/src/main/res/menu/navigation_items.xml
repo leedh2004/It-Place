@@ -3,31 +3,31 @@
     <item
         android:id="@+id/action_home"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/home"
         android:title="@string/home" />
 
     <item
         android:id="@+id/action_friend"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/friend"
         android:title="@string/friend" />
 
     <item
         android:id="@+id/action_create"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/create"
         android:title="@string/create" />
 
     <item
         android:id="@+id/action_notification"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/notification"
         android:title="@string/notification" />
 
     <item
         android:id="@+id/action_setting"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/setting"
         android:title="@string/setting" />
 
 </menu>
