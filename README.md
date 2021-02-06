@@ -107,8 +107,8 @@ CREATE TABLE `user_room` (
 );
 ```
 
-### 초기목표
-...
+<!--### 초기목표
+...-->
 
 
 <br>
@@ -136,18 +136,19 @@ CREATE TABLE `user_room` (
 
 <br>
 
-## 향후 계획 :calendar:
-
-### 1. 프로젝트 관련
+<!--
+## 향후 계획 :calendar:-->
+<!--
+### 1. 프로젝트 관련-->
 ...
-
+<!--
 ### 2. 서비스 관련
-...
+...-->
 <br>
-
-## 최종 목표 :triangular_flag_on_post:
-
-- ...
+<!--
+## 최종 목표 :triangular_flag_on_post:-->
+<!--
+- ...-->
 
 <br>
 
