@@ -11,11 +11,11 @@ var client_secret = process.env.CLOVA_SECRET_KEY
 var userRoute = require('./route/user')
 var uploadRoute = require('./route/upload')
 var roomRoute = require('./route/room')
+var friendRoute = require('./route/friend')
+
 
 var morgan = require('morgan')
-
 // !!! .env 파일 root folder에 생성할 것 !!! .env 파일 notion 참고
-var connection = require('./mysql')
 // 라우팅 테스트
 // express built in bodyParser
 
@@ -31,9 +31,12 @@ app.use(express.static('public'))
 // Routing 테스트
 app.use('/user', userRoute)
 app.use('/room', roomRoute)
+app.use('/friend', friendRoute)
 // S3 Upload 테스트
 app.use('/upload', uploadRoute)
-
+app.use((err, req, res, next) => {
+  res.json({message:err.message})
+})
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })

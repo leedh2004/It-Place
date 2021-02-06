@@ -10,6 +10,7 @@
         android:id="@+id/fragmentLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="@color/black"
         app:layout_constraintBottom_toTopOf="@id/navigation"
         app:layout_constraintTop_toTopOf="parent">
     </FrameLayout>
@@ -18,8 +19,9 @@
         android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:itemIconTint="#121212"
-        app:itemTextColor="#121212"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:background="@color/dark_grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/navigation_items"/>
 

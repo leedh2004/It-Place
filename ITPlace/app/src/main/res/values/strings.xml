@@ -10,4 +10,21 @@
     <string name="home_title">참여중인 플레이스</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="entrance_button">입장하기</string>
+
+    <string name="create_title">플레이스 개설</string>
+    <string name="create_room_name">방 이름 설정</string>
+    <string name="room_usage">플레이스 명을 지정하세요.</string>
+    <string name="create_max_number">제한 인원 수 설정</string>
+    <string name="create_tag">태그 설정</string>
+    <string name="tag_usage">태그 앞에 #를 붙이고, 띄어쓰기 해주세요.</string>
+    <string name="create_thumbnail">썸네일 설정</string>
+    <string name="create_cover">커버 이미지 설정</string>
+    <string name="place_create_button">개설하기</string>
+    <string name="select_at_gallery">앨범에서 사진 선택</string>
+    <string name="select_random">랜덤 이미지</string>
+
+
+
+
 </resources>
