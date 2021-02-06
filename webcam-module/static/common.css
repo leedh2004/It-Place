@@ -2,24 +2,29 @@
     margin :0;
     padding :0;
 }
-body{
+button{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.0);
+    border: 0;
+}
+body, html{
     position: relative;
-    width: 812px;
-    height: 375px;
+    width: 585px;
+    height: 270px;
     
-    background: #ECF0F3;
-    border: 2px solid #000000;
-    box-sizing: border-box;
-    border-radius: 50px;    
+background: #1C1C1C;
 
     z-index: -300;
 }
 
 header, footer{
     position: absolute;
-    width : 100%;
-    height: 60px;
-    background-color: rgba(255,255,255,0.8);
+    width: 585px;
+    height: 50px;
+    
+    background: rgba(28, 28, 28, 0.9);
+    box-shadow: 2px -5px 17px rgba(84, 87, 92, 0.1);
     z-index: 30;
 }
 
@@ -45,37 +50,84 @@ footer.hidden{
 
 button.leftheader{    
     position: absolute;
-    width: 27px;
-    height: 27px;
-    top: 19px;
-
-    background: #C4C4C4;
-    border: 1px solid #000000;
-    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    top: 17px;
 }
 
 text#roomname{
     position: absolute;
+    width: 140px;
+    height: 16px;
+    left: 223px;
+    top: 17px;
+    
+    font-family: Apple SD Gothic Neo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 135%;
+    /* or 22px */
+    display: flex;
+    align-items: center;
     text-align: center;
-    vertical-align: center;
-    width: 100%;
-    top: 15px;
+    
+    color: #FFFFFF;
+}
+
+.side-button{
+    position: absolute;
+    top: 17px;
+    width: 16px;
+    height: 16px;
+    z-index: 3000;
 }
 
 button#people{    
-    left: 635px;
+    left: 423px;
+    background-image: url("/static/img/users_icon.png");
+    background-size: cover;
 }
 
 button#chat{   
-    left: 678px;
+    left: 465px;
+    background-image: url("/static/img/message_icon.png");
+    background-size: cover;
 }
 
 button#album{    
-    left: 721px;
+    left: 507px;
+    background-image: url("/static/img/image_icon.png");
+    background-size: cover;
 }
 
 button#setting{    
-    left: 764px;
+    left: 549px;
+    background-image: url("/static/img/settings_icon.png");
+    background-size: cover;
+}
+button.side-button-people{    
+    left: 20px;
+    background-image: url("/static/img/users_icon.png");
+    background-size: cover;
+}
+
+button.side-button-chat{   
+    left: 62px;
+    background-image: url("/static/img/message_icon.png");
+    background-size: cover;
+}
+
+button.side-button-album{    
+    left: 104px;
+    background-image: url("/static/img/image_icon.png");
+    background-size: cover;
+}
+
+button.side-button-setting{    
+    left: 146px;
+    background-image: url("/static/img/settings_icon.png");
+    background-size: cover;
 }
 
 button#goback{
@@ -87,80 +139,143 @@ button#goback{
 }
 
 aside{
+    background: #333333;
+    box-shadow: 2px -5px 17px rgba(84, 87, 92, 0.1);
     position: absolute;
-    background-color: rgba(255,255,255,0.8);
     z-index: 30;
     
     right: 0px;
-    top:60px;
-    width: 180px;
-    height: 315px;
+    top:0px;
+    width: 182px;
+    height: 270px;
 }
 aside.hidden{
     transition: 0.3s;
-    right: -330px;
+    right: -280px;
 }
 
-aside.hide{
+.hide{
     visibility: hidden;
 }
 
 
-aside#side-people > *{
-    width:100%;
-}
-
 aside#side-people div#people-header{
-    margin-left: 10px;
-    margin-top: 10px;
-    height:40px;
+    position: absolute;
+    width: 115px;
+    height: 16px;
+    left: 12px;
+    top: 51px;
+    
+    font-family: Apple SD Gothic Neo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 135%;
+    /* or 16px */
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
 }
 aside#side-people ul#peopleul{
+    position: absolute;
     list-style:none;
-    top:100px;
-    height:40px;
+    top:81px;
+    left:12px;
+    height:128px;
 }
 aside#side-people ul#peopleul li{
     width:150px;
-    margin-left:10px;
-    margin-bottom:20px;
+    height:26px;
+    margin-bottom:8px;
 }
 aside#side-people ul#peopleul li img{
+    float: left;
     width: 25px;
     height: 25px;
 }
 aside#side-people ul#peopleul li button{
     float: right;
     margin-right: 10px;
-}
+    width: 50px;
+    height: 20px;
+    
+    background: #642F65;
+    border-radius: 4px;
 
-aside#side-people div#invite{
-    margin-left: 10px;
-    position: absolute;
-    top:255px;
-    height:40px;
+
+font-family: Apple SD Gothic Neo;
+font-style: normal;
+font-weight: 600;
+font-size: 8px;
+line-height: 135%;
+/* identical to box height, or 11px */
+
+text-align: center;
+
+color: #FFFFFF;
+
 }
-aside#side-people div#invite button{
-    background: none;
-    border: none;
-    float: right;
-    margin-right: 30px;
+.people div{
+    float: left;
+    width: 35px;
+    height: 25px;
+    
+    font-family: Apple SD Gothic Neo;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 135%;
+    /* or 14px */
+    
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;}
+aside#side-people div#invite{
+    position: absolute;
+    width: 62px;
+    height: 16px;
+    left: 12px;
+    top: 226px;
+    
+    font-family: Apple SD Gothic Neo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 135%;
+    /* or 16px */
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+    
+}
+.invite-button{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 148px;
+    top: 226px;
+    background-image: url(/static/img/chevron_icon.png);
+    background-size: cover;
 }
 
 #chat-messages {
     width: 180px;
     position: absolute;
-    height:250px;
+    height:181px;
     overflow-y: scroll;
     list-style: none;
     bottom: 50px;
 }
 
 #chat-messages li {
-    width: 100%;
+    width: 85%;
     display: block;
     float: left;
     margin-bottom: 10px;
+    margin-left: 12px;
 }
 .mychat .text-wrapper{
     width: 100%;
@@ -168,16 +283,39 @@ aside#side-people div#invite button{
 }
 .mychat .real-text{
     float:right;
-}
-#chat-form{
-    position: absolute;
-    bottom: 15px;
-    left: 10px;
+    background-color: #5e5e5e;
 }
 #chat-input{
-    width: 100px;
+    font-family: Apple SD Gothic Neo;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 135%;
+    /* identical to box height, or 14px */
+    
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+    
+    opacity: 0.5;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    position: absolute;
+    width: 150px;
+    height: 19px;
+    left: 16px;
+    top: 234px;
+    
 }
+#chat-send{
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 152px;
+    top: 234px;
 
+}
 .profile-wrapper{
     vertical-align: top;
     display: inline-block;
@@ -210,17 +348,25 @@ aside#side-people div#invite button{
     max-width: 110px;
     word-break:break-word;
     overflow: visible;
-    background: rgba(0, 0, 0, 0.1);
+    background-color: #5e5e5e;
     border-radius: 0px 6px 6px 6px;
     padding:3px;
     margin: 5px;
 }
-
+.underbar{
+    position: absolute;
+    width: 182px;
+    height: 0px;
+    top: 37px;
+    left:0px;
+    
+    border: 0.1px solid #FFFFFF;
+}
 #side-album{
     padding:5px;
     width: 170px;
-    height: 305px;
-    overflow-y: auto;
+    height: 211px;
+    padding-top: 49px;
 }
 #side-album img{
     background-color: gray;
@@ -229,14 +375,631 @@ aside#side-people div#invite button{
     height: 45px;
 }
 
-#side-setting > div{
-    margin: 15px;
+
+#setting-header{
+    position: absolute;
+    width: 115px;
+    height: 16px;
+    left: 12px;
+    top: 51px;
+
+    font-family: Apple SD Gothic Neo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 135%;
+    /* or 16px */
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
 }
-.setting-section button,
-#side-setting button{
-    background: none;
+
+.setting-section{
+    position: absolute;
+    font-family: Apple SD Gothic Neo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 135%;
+    color: #FFFFFF;
+    top:81px;
+    left:12px;
+    width: 158px;
+    height: 146px;
+}
+.underbar2{
+
+position: absolute;
+width: 182px;
+height: 0px;
+left: 0px;
+top: 242px;
+
+border: 0.1px solid #FFFFFF;
+
+}
+
+.setting-out{position: absolute;
+    height: 16px;
+    left: 69px;
+    top: 249px;
+    
+    font-family: Apple SD Gothic Neo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 135%;
+    /* or 16px */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #FF5858;}
+
+.setting-section button{
+    position: static;
     border: none;
     float: right;
     margin-right: 30px;
 
 }
+
+.setting-content{
+    width: 100%;
+    height: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-button{
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    margin-right: -8px;
+    font-family: Apple SD Gothic Neo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 20px;
+    /* identical to box height, or 167% */
+    letter-spacing: 0.1px;
+    
+    color: #FFFFFF;
+    
+    opacity: 0.5;
+}
+
+#footer-button-wapper{
+    margin: 15px;
+}
+
+
+.video-zone{
+    position: absolute;
+    width: 388px;
+    height: 220px;
+    left: 99px;
+    top: 25px;
+}    
+
+video{
+    position: absolute;
+    width: 192px;
+    height: 108px;
+    
+}
+video.game-mode2{
+    position: absolute;
+    width: 176px;
+    height: 100px;
+    
+}
+
+video:nth-child(1) {
+    left: 0px;
+    top: 0px;
+    transition: 0.3s;
+}
+
+video:nth-child(2) {
+    right: 0px;
+    top: 0px;
+    transition: 0.3s;
+}
+
+video:nth-child(3) {
+    left: 0px;
+    bottom: 0px;
+    transition: 0.3s;
+}
+
+video:nth-child(4) {
+    right: 0px;
+    bottom: 0px;
+    transition: 0.3s;
+}
+
+
+.video-zone.game-mode{
+    position: absolute;
+    width: 356px;
+    height: 252px;
+    left: 25px;
+    top: 9px;
+}
+video.game-mode{
+    position: absolute;
+    width: 85px;
+    height: 48px;
+    top:213px;
+}
+
+video.game-mode:nth-child(1) {
+    left: 0px;
+}
+
+video.game-mode:nth-child(2) {
+    left: 90px;
+}
+
+video.game-mode:nth-child(3) {
+    left: 180px;
+}
+
+video.game-mode:nth-child(4) {
+    left: 270px;
+}
+
+#game-zone{
+    position: absolute;
+    width: 356px;
+    height: 200px;
+    top:9px;
+    left:25px;
+    background: rgba(156, 171, 194, 0.35);
+    opacity: 0.4;
+    border: 2px solid rgba(156, 171, 194, 0.35);
+    box-sizing: border-box;
+    visibility: hidden;
+}
+#game-zone.game-mode{
+    visibility: visible;
+}
+
+#game-pannel{
+    position: absolute;
+    width: 182px;
+    height: 270px;
+    left: 403px;
+    top: 0px;
+    visibility: hidden;
+    box-shadow: 2px -5px 17px rgba(84, 87, 92, 0.1);
+    background: #333333;
+
+    
+}
+#game-pannel.game-mode{
+    visibility: visible;
+}
+
+
+#game-pannel > div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.pannel-search{
+    position: absolute;
+    height: 14px;
+    left: 12px;
+    top: 18px;
+    
+
+    font-family: Apple SD Gothic Neo;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 135%;
+    /* identical to box height, or 14px */
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+
+    opacity: 0.5;
+
+}
+
+.search-line{
+    position: absolute;
+    width: 158px;
+    height: 0px;
+    left: 12px;
+    top: 37px;
+    
+    border: 1px solid #FFFFFF;
+}
+
+.pannel-search-button{
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 559px;
+    top: 18px;
+    background-size: cover;
+    background-image: url("/static/img/search_icon.png");
+}
+.pannel-contents{
+    position: absolute;
+    top:77px;
+    left: 12px;
+    width: 180px;
+}
+.pannel-content{
+    display: inline-block;
+    width: 78px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    margin-right: 1px;
+    margin-bottom: 2px;
+    background-color: #5E5E5E;
+}
+
+.best{
+    position: absolute;
+    width: 115px;
+    height: 16px;
+    left: 12px;
+    top: 51px;
+    
+    font-family: Apple SD Gothic Neo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 135%;
+    /* or 16px */
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+}
+.orderdsong{
+    
+position: absolute;
+width: 115px;
+height: 16px;
+left: 12px;
+top: 139.14px;
+
+font-family: Apple SD Gothic Neo;
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 135%;
+/* or 16px */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+}
+
+.bestcontainer{
+position: absolute;
+width: 212.14px;
+height: 50.14px;
+left: 12px;
+top: 71px;
+}
+.pannel-search-icon{
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top:18px;
+    left: 156px;
+    background-image: url("/static/img/search_icon.png");
+    background-size: cover;
+}
+.bestcontents{
+    display: inline-block;
+    width: 50.14px;
+    height: 50.14px;
+    margin-right: 5px;
+    background: #5E5E5E;
+}
+
+.dosong{
+    position: fixed;
+    height: 20px;
+    left: 104px;
+    top: 107px;
+    
+    font-family: Apple SD Gothic Neo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    /* identical to box height, or 167% */
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1px;
+    
+    color: #FFFFFF;
+    
+    opacity: 0.5;
+}
+
+.orderedContents1{
+    position: absolute;
+    
+height: 14px;
+left: 12px;
+top: 163px;
+font-family: Apple SD Gothic Neo;
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 135%;
+/* identical to box height, or 14px */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+}
+
+.orderedContents2{
+    
+position: absolute;
+height: 14px;
+left: 12px;
+top: 181px;
+
+font-family: Apple SD Gothic Neo;
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 135%;
+/* identical to box height, or 14px */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+}
+
+.orderedContents3{
+    
+position: absolute;
+height: 14px;
+left: 12px;
+top: 199px;
+
+font-family: Apple SD Gothic Neo;
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 135%;
+/* identical to box height, or 14px */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+}
+
+.now-pop{/* 지금 인기있는 영상 */
+
+    position: absolute;
+    height: 16px;
+    left: 12px;
+    top: 51px;
+    
+    font-family: Apple SD Gothic Neo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 135%;
+    /* or 16px */
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+    
+    }
+
+.effect{position: absolute;
+    height: 16px;
+    left: 12px;
+    top: 19px;
+    
+    font-family: Apple SD Gothic Neo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 135%;
+    /* or 16px */
+    
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;}
+
+
+    
+.effect-contents{
+    position: absolute;
+    top:45px;
+    left: 12px;
+    width: 180px;
+}
+.effect-content{
+    position: relative;
+    display: inline-block;
+    width: 78px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    margin-right: 1px;
+    margin-bottom: 2px;
+    background-color: #5E5E5E;
+}
+.effect-content{
+    position: relative;
+    display: inline-block;
+    width: 78px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    margin-right: 1px;
+    margin-bottom: 2px;
+    background-color: #5E5E5E;
+}
+.effect-content > div{
+    
+position: absolute;
+height: 11px;
+left: 5px;
+bottom: 2px;
+
+font-family: Apple SD Gothic Neo;
+font-style: normal;
+font-weight: 600;
+font-size: 8px;
+line-height: 135%;
+/* identical to box height, or 11px */
+
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+}
+.effect-content > img{
+    position: absolute;
+    left: 29px;
+    top: 15px;
+    background-size: cover;
+}
+
+
+.video-zone.sero{
+    position: absolute;
+width: 516px;
+height: 236px;
+left: 34px;
+top: 17px;
+}
+
+video.sero{
+    top:17px;
+    width:126px;
+    height:236px;
+    left:12px;
+}
+video.sero:nth-child(1){
+    left:34px;
+}
+video.sero:nth-child(2){
+    left:164px;
+}
+video.sero:nth-child(3){
+    left:294px;
+}
+video.sero:nth-child(4){
+    left:424px;
+}
+
+.game-content {
+    width: 150px;
+    height:80px;
+    left:12px;
+    position: absolute;
+    background-color: #5E5E5E;
+}
+
+.game-content >div{
+    left:5px;
+    bottom:4px;
+    position: absolute;
+    font-family: Apple SD Gothic Neo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 135%;
+    /* identical to box height, or 11px */
+    
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+}
+
+#game1{
+    top: 45px;
+}
+#game2{
+    top: 133px;
+}
+#game3{
+    top: 221px;
+}
+
+
+.singing{
+    position: fixed!important; 
+    width: 356px!important; 
+    height: 200px!important;
+    top:9px!important;
+    left:25px!important;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+video:nth-child(n+5){
+    visibility: hidden;
+}
+
+.game-content img{
+    position: absolute;
+    top:20px;
+    left:55px;
+}
+
+.killit{
+    font-family: Apple SD Gothic Neo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 135%;
+    /* identical to box height, or 11px */
+    
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+    position:fixed;
+    background-size:cover;
+}
+
+.killit0{
+    top:50px;
+    left:100px;
+}
+
+.killit1{
+    top:50px;
+    left:300px;
+}
+
+.killit2{
+    top:150px;
+    left:100px;
+}
+
+.killit3{
+    top:150px;
+    left:300px;
+}
+
+
+
