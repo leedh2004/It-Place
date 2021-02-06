@@ -134,19 +134,24 @@ CREATE TABLE `user_room` (
 - Express Official Document
 - AWS Official Documnet
 
-<!--
-## 향후 계획 :calendar:-->
-<!--
-### 1. 프로젝트 관련-->
 
-<!--
-### 2. 서비스 관련-->
+## 향후 계획 :calendar:
 
-<!--
-## 최종 목표 :triangular_flag_on_post:-->
+### 1. 프로젝트 관련
+- 몇 가지 구현하지 못한 RESTful API 구현 예정
+- 주요 기능인 화상회의를 API 사용이 아닌, WebRTC 직접 구축을 목표로 함.
+- Face Recgonition Model 자체 모델로 변환
 
+### 2. 서비스 관련
+화상회의 관련 컨텐츠 확장
+- 노래방, 식사, 게임, 파티 등의 기능 추가
 
-<br><br>
+## 최종 목표 :triangular_flag_on_post:
+식사, 노래방, 게임, 파티까지 평소 우리가 즐길 수 있는 모든 활동을 비대면으로 진행할 수 있는 서비스
+
+뉴노멀 시대에 현명하게 즐기자:)
+
+비대면 영상 기반 커뮤니티 서비스, 잇- 플
 
 ## 정보 :notebook_with_decorative_cover:
 
