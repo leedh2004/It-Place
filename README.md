@@ -9,7 +9,7 @@
 <img src="https://user-images.githubusercontent.com/69130921/107108094-d1ca6a80-6878-11eb-8bc3-8dca733d761f.PNG">
 <img src="https://user-images.githubusercontent.com/69130921/107108106-df7ff000-6878-11eb-83a0-48e89ba12fb0.PNG">
 <img src="https://user-images.githubusercontent.com/69130921/107082545-ad9a6980-6837-11eb-82d0-984d6837b168.PNG">
-<img src="https://user-images.githubusercontent.com/69130921/107082885-2e596580-6838-11eb-9571-c8f91670351a.PNG"><br>
+<img src="https://user-images.githubusercontent.com/69130921/107108137-27067c00-6879-11eb-952c-be4eb4efc10f.PNG"><br>
  </div><br>
  
 - 플레이스 안에선 노래, 시청, 주문, 효과, 게임, 촬영과 같은 기능들을 이용할수 있습니다.<br>
