@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/entrance_button"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    app:cardBackgroundColor="@color/brown_grey"
+    app:cardCornerRadius="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/gallery_button"
+            android:layout_width="match_parent"
+            android:layout_height="69.5dp"
+            android:text="@string/select_at_gallery"
+            android:textSize="@dimen/small_title"
+            android:gravity="center"
+            android:textColor="@color/black"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@color/dark_grey"/>
+
+        <TextView
+            android:id="@+id/random_button"
+            android:layout_width="match_parent"
+            android:layout_height="69.5dp"
+            android:text="@string/select_random"
+            android:textSize="@dimen/small_title"
+            android:gravity="center"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

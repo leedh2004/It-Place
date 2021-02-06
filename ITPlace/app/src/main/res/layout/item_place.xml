@@ -7,6 +7,7 @@
     android:layout_marginBottom="25dp"
     android:layout_marginTop="5dp"
     android:layout_marginLeft="5dp"
+    android:backgroundTint="@color/dark_grey"
     android:layout_marginRight="5dp"
     app:cardCornerRadius="8dp"
     app:cardElevation="2dp">
@@ -33,7 +34,7 @@
             android:paddingTop="10dp"
             android:paddingLeft="8dp"
             android:text="제목"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="@dimen/place_title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +47,7 @@
             android:padding="8dp"
             android:text="#태그1 #태그2 #태그3"
             android:textSize="@dimen/place_tag"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/place_title" />
