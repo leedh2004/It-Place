@@ -6,7 +6,8 @@
 ## 잇-플의 이용방법 :page_facing_up:
 - 메인화면에는 현재 생성된 플레이스들이 있는데 제목, 참여중인 인원수, 카테고리를 살펴 보거나 검색 기능을 통해 자기가 원하는 플레이스에 참여할 수 있습니다.<br>
 <div>
-<img src="https://user-images.githubusercontent.com/69130921/107082270-4a103c00-6837-11eb-93d0-16e004cc830b.PNG">
+<img src="https://user-images.githubusercontent.com/69130921/107108094-d1ca6a80-6878-11eb-8bc3-8dca733d761f.PNG">
+<img src="https://user-images.githubusercontent.com/69130921/107108106-df7ff000-6878-11eb-83a0-48e89ba12fb0.PNG">
 <img src="https://user-images.githubusercontent.com/69130921/107082545-ad9a6980-6837-11eb-82d0-984d6837b168.PNG">
 <img src="https://user-images.githubusercontent.com/69130921/107082885-2e596580-6838-11eb-9571-c8f91670351a.PNG"><br>
  </div><br>
