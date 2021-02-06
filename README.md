@@ -134,21 +134,17 @@ CREATE TABLE `user_room` (
 - Express Official Document
 - AWS Official Documnet
 
-<br>
-
 <!--
 ## 향후 계획 :calendar:-->
 <!--
 ### 1. 프로젝트 관련-->
 ...
 <!--
-### 2. 서비스 관련
-...-->
-<br>
+### 2. 서비스 관련-->
+<!--...-->
 <!--
 ## 최종 목표 :triangular_flag_on_post:-->
-<!--
-- ...-->
+<!-- - ...-->
 
 <br>
 
@@ -174,23 +170,23 @@ $ npm run-script run
 ```
 
 ### 저작권 및 사용권 정보 (Copyright / End User License)
-- MIT License
+- :copyright: MIT License
 
 ### 배포자 및 개발자의 연락처 정보 (Contact Infomration)
 - thfud333@gmail.com
 - leedh2008@naver.com
 - ptsaturn68@gmail.com
 - jungsuna99@gmail.com
-- qjawnswkd@gmail.com
+- qjawnswkd0717@gmail.com
 
 ### 알려진 버그 (Known Issue)
-- ....
+- :x:
 
 ### 문제 발생에 대한 해결책 (Troubleshooting)
-- ....
+- :white_check_mark:
 
 ### 크레딧 (Credit)
-- ....
+- :moneybag:
 
 ### 업데이트 정보 (Change Log)
 - `21.02.04 0.0.1
